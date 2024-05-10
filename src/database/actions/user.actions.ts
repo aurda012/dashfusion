@@ -33,9 +33,10 @@ export async function getUserByClerkId(params: GetUserByClerkIdParams) {
 
 export async function createUser(userData: CreateUserParams) {
   try {
+    console.log('Creating User', userData);
     await connectToDatabase();
     const newUser = await User.create(userData);
-
+    console.log('Created User', newUser);
     return newUser;
   } catch (error) {
     console.log(error);

@@ -59,6 +59,7 @@ export async function POST(req: Request) {
   const eventType = evt.type;
 
   if (eventType === 'user.created') {
+    console.log('Inside user.created webhook');
     const {
       id,
       image_url: imageUrl,
@@ -81,6 +82,8 @@ export async function POST(req: Request) {
     );
   }
   if (eventType === 'user.updated') {
+    console.log('Inside user.updated webhook');
+
     const {
       id,
       image_url: imageUrl,
@@ -106,6 +109,8 @@ export async function POST(req: Request) {
     );
   }
   if (eventType === 'user.deleted') {
+    console.log('Inside user.deleted webhook');
+
     const { id } = evt.data;
     const deletedUser = await deleteUser({
       clerkId: id!,
