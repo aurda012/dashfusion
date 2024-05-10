@@ -1,3 +1,5 @@
+'use server';
+
 import User from '@/database/models/user.model';
 import { revalidatePath } from 'next/cache';
 import { connectToDatabase } from '../index';
