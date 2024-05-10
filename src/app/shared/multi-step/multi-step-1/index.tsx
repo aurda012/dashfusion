@@ -13,6 +13,7 @@ import StepSix from '@/app/shared/multi-step/multi-step-1/step-6';
 import StepSeven from '@/app/shared/multi-step/multi-step-1/step-7';
 import Congratulations from '@/app/shared/multi-step/multi-step-1/congratulations';
 import { FileSchema } from '@/utils/validators/common-rules';
+import { Suspense } from 'react';
 
 type FormDataType = {
   propertyType: string;
@@ -114,7 +115,7 @@ export default function MultiStepFormOne() {
   const Component = MAP_STEP_TO_COMPONENT[step];
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div
         className={cn(
           'mx-auto grid w-full max-w-screen-2xl grid-cols-12 place-content-center gap-6 px-5 py-10 @3xl:min-h-[calc(100vh-10rem)] @5xl:gap-8 @6xl:gap-16 xl:px-7'
@@ -123,6 +124,6 @@ export default function MultiStepFormOne() {
         <Component />
       </div>
       <Footer />
-    </>
+    </Suspense>
   );
 }
