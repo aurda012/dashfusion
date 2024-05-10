@@ -22,7 +22,7 @@ import {
   PiFeatherDuotone,
   PiFileImageDuotone,
   PiFolderLockDuotone,
-  PiFolderNotchDuotone,
+  PiFolderDuotone,
   PiGridFourDuotone,
   PiHammerDuotone,
   PiHeadsetDuotone,
@@ -85,7 +85,7 @@ export const carbonMenuItems: MenuItemsType[] = [
       {
         name: 'File Manager',
         href: '/',
-        icon: PiFolderNotchDuotone,
+        icon: PiFolderDuotone,
       },
       {
         name: 'Appointment',

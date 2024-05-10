@@ -36,7 +36,7 @@ import {
   PiBriefcaseDuotone,
   PiHouseLineDuotone,
   PiAirplaneTiltDuotone,
-  PiFolderNotchDuotone,
+  PiFolderDuotone,
   PiCaretCircleUpDownDuotone,
   PiListNumbersDuotone,
   PiCoinDuotone,
@@ -56,7 +56,7 @@ export const menuItems = [
   {
     name: 'File Manager',
     href: '/',
-    icon: PiFolderNotchDuotone,
+    icon: PiFolderDuotone,
     shortcut: {
       modifiers: 'alt',
       key: '1',
@@ -288,7 +288,7 @@ export const menuItems = [
   {
     name: 'File Manager',
     href: routes.file.manager,
-    icon: PiFolderNotchDuotone,
+    icon: PiFolderDuotone,
   },
   {
     name: 'Event Calendar',
