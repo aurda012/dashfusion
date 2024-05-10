@@ -2,13 +2,13 @@ import './src/env.mjs';
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  webpack: (config, _context) => {
-    config.resolve.alias['jotai'] = path.resolve(
-      __dirname,
-      'node_modules/jotai'
-    );
-    return config;
-  },
+  // webpack: (config, _context) => {
+  //   config.resolve.alias['jotai'] = path.resolve(
+  //     __dirname,
+  //     'node_modules/jotai'
+  //   );
+  //   return config;
+  // },
   images: {
     remotePatterns: [
       {
