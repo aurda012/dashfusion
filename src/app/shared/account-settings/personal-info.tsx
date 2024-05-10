@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import toast from 'react-hot-toast';
 import { SubmitHandler, Controller } from 'react-hook-form';
 import { PiClock, PiEnvelopeSimple } from 'react-icons/pi';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Loader, Text, Input } from 'rizzui';
 import FormGroup from '@/app/shared/form-group';
 import FormFooter from '@/components/form-footer';

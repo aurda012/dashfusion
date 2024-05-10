@@ -1,6 +1,6 @@
 'use server';
 
-import User from '@/database/models/user.model';
+import User, { IUser } from '@/database/models/user.model';
 import { revalidatePath } from 'next/cache';
 import { connectToDatabase } from '../index';
 import {
@@ -9,24 +9,25 @@ import {
   GetUserByClerkIdParams,
   UpdateUserParams,
 } from './shared.types';
+import { auth } from '@clerk/nextjs/server';
 
 export async function getUserById(uid: string) {
   try {
     await connectToDatabase();
     const user = await User.findById(uid);
-    return user;
+    return JSON.parse(JSON.stringify(user)) as IUser;
   } catch (error) {
     console.log(error);
     throw error;
   }
 }
 
-export async function getUserByClerkId(params: GetUserByClerkIdParams) {
+export async function getUser() {
   try {
+    const { userId } = auth();
     await connectToDatabase();
-    const { clerkId } = params;
-    const user = await User.findOne({ clerkId });
-    return user;
+    const user = await User.findOne({ clerkId: userId });
+    return JSON.parse(JSON.stringify(user)) as IUser;
   } catch (error) {
     console.log(error);
     throw error;
@@ -71,7 +72,7 @@ export async function deleteUser(params: DeleteUserParams) {
     }
     // TODO: delete all related data.
     const deleteUser = await User.findByIdAndDelete(user._id);
-    return deleteUser;
+    return JSON.parse(JSON.stringify(deleteUser)) as IUser;
   } catch (error) {
     console.log(error);
     throw error;

@@ -1,7 +1,7 @@
 'use client';
 
 import { PinCode, Button } from 'rizzui';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { SubmitHandler } from 'react-hook-form';
 
 type FormValues = {

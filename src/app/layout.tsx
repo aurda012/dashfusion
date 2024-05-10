@@ -9,6 +9,7 @@ import NextProgress from '@/components/next-progress';
 
 // styles
 import '@/app/globals.css';
+import ModalProvider from '@/components/providers/ModalProvider';
 
 export const metadata = {
   title: siteConfig.title,
@@ -34,7 +35,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <NextProgress />
-          {children}
+          <ModalProvider>{children}</ModalProvider>
           <Toaster />
           <GlobalDrawer />
           <GlobalModal />

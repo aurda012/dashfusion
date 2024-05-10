@@ -1,7 +1,7 @@
 'use client';
 
 import { SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Input, Button, Text, Collapse } from 'rizzui';
 import cn from '@/utils/class-names';
 import { useState } from 'react';

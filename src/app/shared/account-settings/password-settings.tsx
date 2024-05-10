@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { SubmitHandler, Controller } from 'react-hook-form';
 import { PiDesktop } from 'react-icons/pi';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Button, Password, Title, Text } from 'rizzui';
 import cn from '@/utils/class-names';
 import { ProfileHeader } from '@/app/shared/account-settings/profile-settings';

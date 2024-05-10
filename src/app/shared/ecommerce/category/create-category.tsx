@@ -7,7 +7,7 @@ import SelectLoader from '@/components/loader/select-loader';
 import QuillLoader from '@/components/loader/quill-loader';
 import { Button, Input, Text, Title } from 'rizzui';
 import cn from '@/utils/class-names';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import {
   CategoryFormInput,
   categoryFormSchema,

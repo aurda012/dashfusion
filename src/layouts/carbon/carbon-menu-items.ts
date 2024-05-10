@@ -48,6 +48,7 @@ import {
   PiUserPlusDuotone,
   PiShapesDuotone,
   PiNewspaperClippingDuotone,
+  PiKanban,
 } from 'react-icons/pi';
 import { atom } from 'jotai';
 
@@ -306,7 +307,7 @@ export const carbonMenuItems: MenuItemsType[] = [
         icon: PiFolderLockDuotone,
       },
       {
-        name: 'Point of Sell',
+        name: 'Point of Sale',
         href: routes.pos.index,
         icon: PiCreditCardDuotone,
       },
@@ -314,6 +315,12 @@ export const carbonMenuItems: MenuItemsType[] = [
         name: 'Invoice Builder',
         href: routes.invoice.builder,
         icon: PiNewspaperClippingDuotone,
+        badge: 'NEW',
+      },
+      {
+        name: 'Kanban',
+        href: routes.kanban.dashboard,
+        icon: PiKanban,
         badge: 'NEW',
       },
     ],

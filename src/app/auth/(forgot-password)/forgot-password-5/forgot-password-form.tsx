@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import { SubmitHandler } from 'react-hook-form';
 import { Button, Input, Text } from 'rizzui';
 import { useMedia } from '@/hooks/use-media';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { routes } from '@/config/routes';
 import {
   forgetPasswordSchema,

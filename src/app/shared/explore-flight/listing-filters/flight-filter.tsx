@@ -7,7 +7,7 @@ import cn from '@/utils/class-names';
 import ExchangeIcon from '@/components/icons/exchange';
 import { DatePicker } from '@/components/ui/datepicker';
 import { IoSearchOutline } from 'react-icons/io5';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Controller } from 'react-hook-form';
 import PersonSelect from '@/app/shared/explore-flight/listing-filters/person-select';
 import {
@@ -143,7 +143,7 @@ function OneWayFilter({ state }: any) {
                 </div>
                 <div
                   className={cn(
-                    'absolute inset-x-0 bottom-1.5 !mx-auto hidden h-7 w-7 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-gray-0 text-gray-900 lg:flex dark:bg-gray-100',
+                    'absolute inset-x-0 bottom-1.5 !mx-auto hidden h-7 w-7 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-gray-0 text-gray-900 dark:bg-gray-100 lg:flex',
                     changeAirport && 'rotate-180'
                   )}
                   onClick={() => setChangeAirport(!changeAirport)}
@@ -282,7 +282,7 @@ function RoundWayFilter({ state }: any) {
                 </div>
                 <div
                   className={cn(
-                    'absolute inset-x-0 bottom-1.5 !mx-auto hidden h-7 w-7 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-gray-0 text-gray-900 lg:flex dark:bg-gray-100',
+                    'absolute inset-x-0 bottom-1.5 !mx-auto hidden h-7 w-7 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-gray-0 text-gray-900 dark:bg-gray-100 lg:flex',
                     changeAirport && 'rotate-180'
                   )}
                   onClick={() => setChangeAirport(!changeAirport)}

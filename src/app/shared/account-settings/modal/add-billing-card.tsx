@@ -11,7 +11,7 @@ import {
   NumberInputProps,
 } from 'rizzui';
 import { useModal } from '@/app/shared/modal-views/use-modal';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import {
   creditCardSchema,
   CreditCardSchema,

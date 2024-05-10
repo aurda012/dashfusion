@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { PiXBold } from 'react-icons/pi';
 import { Controller, SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Input, Button, ActionIcon, Title, Select } from 'rizzui';
 import {
   CreateUserInput,

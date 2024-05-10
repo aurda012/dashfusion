@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { useRouter } from 'next/navigation';
 import ProductCarousel from '@/components/product-carousel';
 import { routes } from '@/config/routes';

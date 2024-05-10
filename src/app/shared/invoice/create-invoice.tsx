@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { SubmitHandler, Controller } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Text, Input, Select, Textarea } from 'rizzui';
 import { PhoneNumber } from '@/components/ui/phone-input';
 import { DatePicker } from '@/components/ui/datepicker';

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { SubmitHandler } from 'react-hook-form';
 import { Password, Button, Switch, Input, Text } from 'rizzui';
 import { useMedia } from '@/hooks/use-media';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { routes } from '@/config/routes';
 import { loginSchema, LoginSchema } from '@/utils/validators/login.schema';
 

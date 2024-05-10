@@ -45,8 +45,10 @@ import FlightIcon from '@/components/icons/flight-icon';
 import FinancialStatisticsIcon from '@/components/icons/financial-statistics';
 import BusinessIcon from '@/components/icons/business';
 import SuitcaseIcon from '@/components/icons/suitcase';
+import SquareBoxIcon from '@/components/icons/square-box';
 
 export const lithiumMenuIcons = {
+  SquareBoxIcon,
   FilesIcon,
   TruckIcon,
   ShopIcon,

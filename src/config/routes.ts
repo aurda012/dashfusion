@@ -50,6 +50,9 @@ export const routes = {
     dashboard: '/appointment',
     appointmentList: '/appointment/list',
   },
+  kanban: {
+    dashboard: '/kanban',
+  },
   executive: {
     dashboard: '/executive',
   },

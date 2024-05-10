@@ -51,6 +51,7 @@ import {
   PiUserPlus,
   PiShapes,
   PiNewspaperClippingDuotone,
+  PiKanban,
 } from 'react-icons/pi';
 import { atom } from 'jotai';
 
@@ -314,7 +315,7 @@ export const berylliumMenuItems: MenuItemsType[] = [
         icon: PiFolderLock,
       },
       {
-        name: 'Point of Sell',
+        name: 'Point of Sale',
         href: routes.pos.index,
         icon: PiCreditCard,
       },
@@ -322,6 +323,12 @@ export const berylliumMenuItems: MenuItemsType[] = [
         name: 'Invoice Builder',
         href: routes.invoice.builder,
         icon: PiNewspaperClippingDuotone,
+        badge: 'NEW',
+      },
+      {
+        name: 'Kanban',
+        href: routes.kanban.dashboard,
+        icon: PiKanban,
         badge: 'NEW',
       },
     ],

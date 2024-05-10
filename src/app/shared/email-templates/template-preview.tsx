@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import { SubmitHandler } from 'react-hook-form';
 import { Button, Input } from 'rizzui';
 import cn from '@/utils/class-names';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import {
   NewsLetterFormSchema,
   newsLetterFormSchema,

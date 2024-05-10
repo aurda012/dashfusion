@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Input, Button } from 'rizzui';
 import {
   CreateFolderInput,

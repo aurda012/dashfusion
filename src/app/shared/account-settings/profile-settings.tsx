@@ -4,7 +4,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { SubmitHandler, Controller } from 'react-hook-form';
 import { PiEnvelopeSimple, PiSealCheckFill } from 'react-icons/pi';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Button, Title, Text, Input, Checkbox, Select } from 'rizzui';
 import cn from '@/utils/class-names';
 import { routes } from '@/config/routes';

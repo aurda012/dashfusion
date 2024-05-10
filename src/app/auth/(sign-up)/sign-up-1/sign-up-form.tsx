@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
 import { PiArrowRightBold } from 'react-icons/pi';
 import { Password, Checkbox, Button, Input, Text } from 'rizzui';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { routes } from '@/config/routes';
 import { SignUpSchema, signUpSchema } from '@/utils/validators/signup.schema';
 

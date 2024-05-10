@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { Controller, SubmitHandler } from 'react-hook-form';
 import { useModal } from '@/app/shared/modal-views/use-modal';
 import { Input, Text, Title, Button, Select } from 'rizzui';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import {
   AddTeamMemberInput,
   addTeamMemberSchema,

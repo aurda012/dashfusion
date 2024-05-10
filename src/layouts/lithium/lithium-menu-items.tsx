@@ -239,6 +239,17 @@ export const lithiumMenuItems: LithiumMenuItem = {
           },
         ],
       },
+      {
+        name: 'Kanban',
+        description: '"Effortlessly Organize Tasks!"',
+        icon: 'SquareBoxIcon',
+        subMenuItems: [
+          {
+            name: 'Boards',
+            href: routes.kanban.dashboard,
+          },
+        ],
+      },
     ],
   },
   widgets: {
@@ -354,7 +365,7 @@ export const lithiumMenuItems: LithiumMenuItem = {
         href: routes.searchAndFilter.flight,
       },
       {
-        name: 'Point of Sell',
+        name: 'Point of Sale',
         href: routes.pos.index,
         icon: 'PointOfSellIcon',
       },

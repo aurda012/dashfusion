@@ -21,7 +21,7 @@ import {
   messageIdAtom,
 } from '@/app/shared/support/inbox/message-list';
 import { SubmitHandler, Controller } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import ActionDropdown from '@/app/shared/support/inbox/action-dropdown';
 import MessageBody from '@/app/shared/support/inbox/message-body';
 import SimpleBar from '@/components/ui/simplebar';
@@ -264,7 +264,7 @@ export default function MessageDetails({ className }: { className?: string }) {
 
         <div
           ref={ref}
-          className="grid grid-cols-[32px_1fr] items-start gap-3 rounded-b-lg bg-white @3xl:pt-4 lg:gap-4 lg:pl-0 xl:grid-cols-[48px_1fr] dark:bg-transparent dark:lg:pt-0"
+          className="grid grid-cols-[32px_1fr] items-start gap-3 rounded-b-lg bg-white @3xl:pt-4 dark:bg-transparent lg:gap-4 lg:pl-0 dark:lg:pt-0 xl:grid-cols-[48px_1fr]"
         >
           <figure className="dark:mt-4">
             <Avatar

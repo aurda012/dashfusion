@@ -6,7 +6,7 @@ import { Controller, SubmitHandler } from 'react-hook-form';
 import { ActionIcon, Button, Input, Text, Textarea, Title } from 'rizzui';
 import cn from '@/utils/class-names';
 import { useModal } from '@/app/shared/modal-views/use-modal';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import toast from 'react-hot-toast';
 import { DatePicker } from '@/components/ui/datepicker';
 import { CalendarEvent } from '@/types';

@@ -11,7 +11,7 @@ enum MODE {
 
 export const siteConfig = {
   title: 'dashfusion | App Dashboard',
-  description: `dashfusion is an all-in-one dashboard with apps built for modern web technologies. It's a modern, beautiful, and customizable dashboard that you can use to build awesome apps.`,
+  description: `dashfusion is an all-in-one dashboard filled with fully functional apps. It's a modern, beautiful, and customizable dashboard that showcases the power of development.`,
   logo: logoImg,
   icon: logoIconImg,
   mode: MODE.LIGHT,
@@ -40,5 +40,66 @@ export const metaObject = (
       locale: 'en_US',
       type: 'website',
     },
+  };
+};
+
+export const createMetadata = (
+  title: string,
+  description: string,
+  keywords: string[]
+) => {
+  return {
+    generator: 'CodeLounge',
+    applicationName: 'CodeLounge',
+    referrer: 'origin-when-cross-origin',
+    title: title,
+    description: description,
+    keywords: keywords,
+    metadataBase: new URL('https://codelounge.vercel.app'),
+    openGraph: {
+      title: title,
+      description: description,
+      url: 'https://codelounge.vercel.app',
+      siteName: 'CodeLounge',
+      images: [
+        {
+          url: 'https://codelounge.vercel.app/images/og-image-1200x628.png', // Must be an absolute URL
+          width: 1200,
+          height: 628,
+          alt: 'CodeLounge OG Image',
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: ['https://codelounge.vercel.app/images/og-image-1200x628.png'], // Must be an absolute URL
+    },
+    icons: {
+      icon: '/images/site-logo.svg',
+      shortcut: '/images/favicon-32x32.png',
+      apple: '/images/apple-touch-icon.png',
+    },
+    robots: {
+      index: true,
+      follow: false,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: false,
+      },
+    },
+    verification: {
+      google: 'google',
+      yandex: 'yandex',
+      yahoo: 'yahoo',
+      other: {
+        me: ['my-email', 'my-link'],
+      },
+    },
+    category: 'software',
   };
 };

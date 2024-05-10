@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PiChecksBold, PiFilesBold, PiXBold } from 'react-icons/pi';
 import { RgbaColorPicker } from 'react-colorful';
 import { Controller, SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import { Input, Button, Tooltip, ActionIcon, Title } from 'rizzui';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 import {

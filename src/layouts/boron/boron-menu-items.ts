@@ -42,6 +42,7 @@ import {
   PiCoinDuotone,
   PiShapesDuotone,
   PiNewspaperClippingDuotone,
+  PiKanban,
 } from 'react-icons/pi';
 import { routes } from '@/config/routes';
 import { DUMMY_ID } from '@/config/constants';
@@ -309,6 +310,11 @@ export const menuItems = [
     name: 'Invoice Builder',
     href: routes.invoice.builder,
     icon: PiNewspaperClippingDuotone,
+  },
+  {
+    name: 'Kanban',
+    href: routes.kanban.dashboard,
+    icon: PiKanban,
   },
   // label start
   {

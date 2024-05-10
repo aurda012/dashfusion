@@ -13,7 +13,7 @@ import {
   CheckboxGroup,
 } from 'rizzui';
 import { PERMISSIONS } from '@/data/users-data';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 import {
   RolePermissionInput,
   rolePermissionSchema,

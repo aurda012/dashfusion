@@ -2,7 +2,7 @@
 
 import { Button, PinCode } from 'rizzui';
 import { SubmitHandler } from 'react-hook-form';
-import { Form } from '@/components/ui/form';
+import { Form } from '@/components/ui/form/form';
 
 type FormValues = {
   otp: string;

@@ -21,6 +21,25 @@ export default withUt({
     },
     extend: {
       colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
         gray: {
           0: 'rgb(var(--gray-0) / <alpha-value>)',
           50: 'rgb(var(--gray-50) / <alpha-value>)',
@@ -72,12 +91,19 @@ export default withUt({
           dark: 'rgb(var(--green-dark) / <alpha-value>)',
         },
       },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
       fontFamily: {
         inter: ['var(--font-inter)'],
         lexend: ['var(--font-lexend)'],
       },
       // required these animations for the Loader component
       animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
         blink: 'blink 1.4s infinite both;',
         'scale-up': 'scaleUp 500ms infinite alternate',
         'spin-slow': 'spin 4s linear infinite',
@@ -91,6 +117,14 @@ export default withUt({
         'skeleton-dark': `linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)`,
       },
       keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
         blink: {
           '0%': { opacity: '0.2' },
           '20%': { opacity: '1' },
@@ -139,6 +173,7 @@ export default withUt({
     },
   },
   plugins: [
+    require('tailwindcss-animate'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
     plugin(function ({ addVariant }) {

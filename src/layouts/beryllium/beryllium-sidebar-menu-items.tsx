@@ -42,6 +42,7 @@ import {
   PiCalendarDuotone,
   PiShapes,
   PiNewspaperClippingDuotone,
+  PiKanban,
 } from 'react-icons/pi';
 
 // Note: do not add href in the label object, it is rendering as label
@@ -260,7 +261,7 @@ export const berylliumSidebarMenuItems = [
     icon: <PiFolderLock />,
   },
   {
-    name: 'Point of Sell',
+    name: 'Point of Sale',
     href: routes.pos.index,
     icon: <PiCreditCard />,
   },
@@ -268,6 +269,12 @@ export const berylliumSidebarMenuItems = [
     name: 'Invoice Builder',
     href: routes.invoice.builder,
     icon: <PiNewspaperClippingDuotone />,
+    badge: 'NEW',
+  },
+  {
+    name: 'Kanban',
+    href: routes.kanban.dashboard,
+    icon: <PiKanban />,
     badge: 'NEW',
   },
   // label start
