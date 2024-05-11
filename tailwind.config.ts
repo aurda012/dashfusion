@@ -20,6 +20,9 @@ export default withUt({
       '4xl': '2560px', // only need to control product grid mode in ultra 4k device
     },
     extend: {
+      aspectRatio: {
+        poster: '2 / 3',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -111,6 +114,7 @@ export default withUt({
         skeleton: 'skeletonWave 1.6s linear 0.5s infinite',
         'spinner-ease-spin': 'spinnerSpin 0.8s ease infinite',
         'spinner-linear-spin': 'spinnerSpin 0.8s linear infinite',
+        shine: 'shine 2s linear infinite',
       },
       backgroundImage: {
         skeleton: `linear-gradient(90deg,transparent,#ecebeb,transparent)`,
@@ -159,6 +163,14 @@ export default withUt({
             transform: 'rotate(360deg)',
           },
         },
+        shine: {
+          from: {
+            backgroundPosition: '0 0',
+          },
+          to: {
+            backgroundPosition: '-200% 0',
+          },
+        },
       },
       content: {
         underline: 'url("/public/underline.svg")',
@@ -169,6 +181,9 @@ export default withUt({
       },
       gridTemplateColumns: {
         '18': 'repeat(18, minmax(0, 1fr))',
+      },
+      maxWidth: {
+        app: '1080px',
       },
     },
   },

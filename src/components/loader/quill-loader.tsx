@@ -1,5 +1,5 @@
 import cn from '@/utils/class-names';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/components/ui/Skeleton/skeleton';
 
 interface SelectLoaderProps {
   className?: string;

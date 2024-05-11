@@ -20,7 +20,7 @@ import {
   SupportStatusType,
   supportTypes,
 } from '@/data/support-inbox';
-import { LineGroup, Skeleton } from '@/components/ui/skeleton';
+import { LineGroup, Skeleton } from '@/components/ui/Skeleton/skeleton';
 import SimpleBar from '@/components/ui/simplebar';
 
 interface MessageItemProps {

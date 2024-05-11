@@ -69,6 +69,11 @@ const nextConfig = {
         hostname: 'files.stripe.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        port: '',
+      },
     ],
   },
   reactStrictMode: false,
