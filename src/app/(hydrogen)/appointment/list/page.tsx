@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import AppointmentListPageHeader from './page-header';
 import AppointmentListStats from '@/app/shared/appointment/appointment-list/stats';
 import AppointmentListTable from '@/app/shared/appointment/appointment-list/list';

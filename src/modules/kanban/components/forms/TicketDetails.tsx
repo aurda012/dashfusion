@@ -6,10 +6,15 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'react-hot-toast';
 
-import { upsertTicket } from '@/database/actions/ticket.actions';
+import { upsertTicket } from '@/modules/kanban/actions/ticket.actions';
 
 import { useModal } from '@/hooks/use-modal';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '../../../../components/ui/card';
 import {
   Form,
   FormControl,
@@ -17,18 +22,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Textarea } from '../ui/textarea';
+} from '../../../../components/ui/form';
+import { Button } from '../../../../components/ui/button';
+import { Input } from '../../../../components/ui/input';
+import { Textarea } from '../../../../components/ui/textarea';
 import TagDetails from './TagDetails';
 
 import {
   type TicketDetailsSchema,
   TicketDetailsValidator,
-} from '@/lib/validators/ticket-details';
-import { ITag } from '@/database/models/tag.model';
-import { ITicketPopulated } from '@/database/models/ticket.model';
+} from '@/modules/kanban/validators/ticket-details';
+import { ITag } from '@/modules/kanban/models/tag.model';
+import { ITicketPopulated } from '@/modules/kanban/models/ticket.model';
 import { Types } from 'mongoose';
 import { Text } from 'rizzui';
 

@@ -2,7 +2,7 @@ import SignInForm from '@/app/signin/sign-in-form';
 import AuthWrapperOne from '@/app/shared/auth-layout/auth-wrapper-one';
 import Image from 'next/image';
 import UnderlineShape from '@/components/shape/underline';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Sign In'),

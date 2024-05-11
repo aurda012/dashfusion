@@ -6,7 +6,7 @@ import { Button } from 'rizzui';
 import cn from '@/utils/class-names';
 import SocialItems from '@/components/ui/social-shares';
 import { usePathname, useRouter } from 'next/navigation';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { routes } from '@/config/routes';
 
 const ignoreBackButtonRoutes = [routes.accessDenied, routes.notFound];

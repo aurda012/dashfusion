@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import TeamSettingsView from '@/app/shared/account-settings/team-settings';
 
 export const metadata = {

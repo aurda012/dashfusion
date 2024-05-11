@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import NotificationSettingsView from '@/app/shared/account-settings/notification-settings';
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import IntegrationSettingsView from '@/app/shared/account-settings/integration-settings';
 
 export const metadata = {

@@ -5,7 +5,7 @@ import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import ProductsTable from '@/app/shared/ecommerce/product/product-list/table';
 import { productsData } from '@/data/products-data';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import ExportButton from '@/app/shared/export-button';
 
 export const metadata = {

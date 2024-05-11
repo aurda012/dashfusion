@@ -1,5 +1,5 @@
 import AppointmentDashboard from '@/app/shared/appointment/dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Appointment'),

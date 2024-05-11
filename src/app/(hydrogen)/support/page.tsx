@@ -1,5 +1,5 @@
 import SupportDashboard from '@/app/shared/support/dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Support'),

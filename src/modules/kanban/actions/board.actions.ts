@@ -1,10 +1,10 @@
 'use server';
 
-import User from '@/database/models/user.model';
-import { connectToDatabase } from '../index';
 import { auth } from '@clerk/nextjs/server';
+import { connectToDatabase } from '@/database/index';
+import Activity from '@/database/models/activity';
+import User from '@/database/models/user.model';
 import Board, { IBoard } from '../models/board.model';
-import Activity from '../models/activity';
 
 export async function createBoard(name: string) {
   try {

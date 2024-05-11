@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Title, Button } from 'rizzui';
 import { PiHouseLineBold } from 'react-icons/pi';
 import SocialItems from '@/components/ui/social-shares';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import NotFoundImg from '@public/not-found.png';
 
 export default function NotFound() {

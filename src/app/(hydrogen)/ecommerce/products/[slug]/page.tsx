@@ -1,7 +1,7 @@
 import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import ProductDetails from '@/app/shared/ecommerce/product/product-details';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Product Details'),

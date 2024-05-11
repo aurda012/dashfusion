@@ -1,7 +1,7 @@
 'use server';
 
-import { connectToDatabase } from '..';
-import Activity from '../models/activity';
+import { connectToDatabase } from '@/database';
+import Activity from '@/database/models/activity';
 import Tag, { ITag } from '../models/tag.model';
 
 export const upsertTag = async (tag: ITag) => {

@@ -1,7 +1,7 @@
 'use server';
 
 import { render } from '@react-email/render';
-import OrderConfirmationEmail from '@/email-templates/order-confirmation';
+import OrderConfirmationEmail from '@/modules/email-templates/components/order-confirmation';
 import { sendEmail } from '@/utils/email';
 
 export const sendOrderConfirmationEmail = async (data: { email: string }) => {

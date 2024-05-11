@@ -13,8 +13,8 @@ import {
   newsLetterFormSchema,
 } from '@/utils/validators/newsletter.schema';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import { sendAccountConfirmationEmail } from '@/server/actions/account-confirmation.action';
-import { sendOrderConfirmationEmail } from '@/server/actions/order-confirmation.action';
+import { sendAccountConfirmationEmail } from '@/modules/email-templates/actions/account-confirmation.action';
+import { sendOrderConfirmationEmail } from '@/modules/email-templates/actions/order-confirmation.action';
 import { messages } from '@/config/messages';
 
 export default function TemplatePreview({

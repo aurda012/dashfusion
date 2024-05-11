@@ -6,7 +6,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'react-hot-toast';
 
-import { upsertLane } from '@/database/actions/lane.actions';
+import { upsertLane } from '@/modules/kanban/actions/lane.actions';
 
 import { useModal } from '@/hooks/use-modal';
 import {
@@ -18,14 +18,17 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Input } from '../ui/input';
-import { Button } from '../ui/button';
-import { ColorPicker } from '../ui/color-picker';
+import { Input } from '../../../../components/ui/input';
+import { Button } from '../../../../components/ui/button';
+import { ColorPicker } from '../../../../components/ui/color-picker';
 import {
   type LaneDetailsSchema,
   LaneDetailsValidator,
-} from '@/lib/validators/lane-details';
-import { ILane, ILaneWithTicketsAndTags } from '@/database/models/lane.model';
+} from '@/modules/kanban/validators/lane-details';
+import {
+  ILane,
+  ILaneWithTicketsAndTags,
+} from '@/modules/kanban/models/lane.model';
 import { Types } from 'mongoose';
 import { Text } from 'rizzui';
 import { saveActivity } from '@/database/actions/activity.actions';

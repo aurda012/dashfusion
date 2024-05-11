@@ -2,7 +2,10 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 import { IUser } from '@/database/models/user.model';
-import { ITicket, ITicketPopulated } from '@/database/models/ticket.model';
+import {
+  ITicket,
+  ITicketPopulated,
+} from '@/modules/kanban/models/ticket.model';
 
 export interface ModalData {
   user?: IUser;

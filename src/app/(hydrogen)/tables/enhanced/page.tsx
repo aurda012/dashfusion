@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import { invoiceData } from '@/data/invoice-data';
 import InvoiceTable from '@/app/shared/invoice/invoice-list/table';
 import TableLayout from '@/app/(hydrogen)/tables/table-layout';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Enhanced Table'),

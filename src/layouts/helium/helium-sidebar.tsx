@@ -4,7 +4,7 @@ import Link from 'next/link';
 import cn from '@/utils/class-names';
 import Image from 'next/image';
 import SimpleBar from '@/components/ui/simplebar';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { HeliumSidebarMenu } from './helium-sidebar-menu';
 
 export default function HeliumSidebar({ className }: { className?: string }) {

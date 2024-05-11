@@ -1,5 +1,5 @@
 import IconsList from '@/app/shared/icons/icons-list';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Icons'),

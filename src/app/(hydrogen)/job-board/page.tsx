@@ -1,5 +1,5 @@
 import JobDashboard from '@/app/shared/job-dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Job Board'),

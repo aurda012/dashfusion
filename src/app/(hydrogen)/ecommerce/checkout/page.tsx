@@ -1,7 +1,7 @@
 import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import CheckoutPageWrapper from '@/app/shared/ecommerce/checkout';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Checkout'),

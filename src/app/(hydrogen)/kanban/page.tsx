@@ -1,8 +1,11 @@
 import React from 'react';
 import { redirect } from 'next/navigation';
 
-import { createBoard, getUserBoards } from '@/database/actions/board.actions';
-import { createMetadata } from '@/config/site.config';
+import {
+  createBoard,
+  getUserBoards,
+} from '@/modules/kanban/actions/board.actions';
+import { createMetadata } from '@/config/site';
 
 interface PipelinesPageProps {
   params: {

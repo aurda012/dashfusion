@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import PersonalInfoView from '@/app/shared/account-settings/personal-info';
 
 export const metadata = {

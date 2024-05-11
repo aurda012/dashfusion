@@ -9,7 +9,7 @@ import cn from '@/utils/class-names';
 import { PiArrowLineRight, PiUserCirclePlus } from 'react-icons/pi';
 import { FcGoogle } from 'react-icons/fc';
 import OrSeparation from '@/app/shared/auth-layout/or-separation';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { BsFacebook } from 'react-icons/bs';
 
 function AuthNavLink({

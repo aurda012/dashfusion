@@ -12,7 +12,7 @@ import RecentAppList from './recent-app-list';
 import CircleProgressBars from './circle-progressbars';
 import AreaChartList from './area-chart-list';
 import BarChartList from './bar-chart-list';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Cards'),

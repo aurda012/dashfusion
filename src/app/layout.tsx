@@ -2,7 +2,7 @@ import { Toaster } from 'react-hot-toast';
 import GlobalDrawer from '@/app/shared/drawer-views/container';
 import GlobalModal from '@/app/shared/modal-views/container';
 import { ThemeProvider } from '@/app/shared/theme-provider';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { inter, lexendDeca } from '@/app/fonts';
 import cn from '@/utils/class-names';
 import NextProgress from '@/components/next-progress';

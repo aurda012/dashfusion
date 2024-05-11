@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import { Edit, MoreVertical, PlusCircleIcon, Trash } from 'lucide-react';
 
-import { deleteLane } from '@/database/actions/lane.actions';
+import { deleteLane } from '@/modules/kanban/actions/lane.actions';
 
 import { useModal } from '@/hooks/use-modal';
 import {
@@ -19,7 +19,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { Badge } from '@/components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,14 +28,14 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import BoardTicket from './BoardTicket';
-import LaneDetails from '@/components/forms/LaneDetails';
-import TicketDetails from '@/components/forms/TicketDetails';
+import LaneDetails from '@/modules/kanban/components/forms/LaneDetails';
+import TicketDetails from '@/modules/kanban/components/forms/TicketDetails';
 import CustomModal from '@/components/common/CustomModal';
 
 import { cn } from '@/lib/utils';
 import { toast } from 'react-hot-toast';
-import { ILaneWithTicketsAndTags } from '@/database/models/lane.model';
-import { ITicketPopulated } from '@/database/models/ticket.model';
+import { ILaneWithTicketsAndTags } from '@/modules/kanban/models/lane.model';
+import { ITicketPopulated } from '@/modules/kanban/models/ticket.model';
 import { Text } from 'rizzui';
 
 interface BoardLaneProps {

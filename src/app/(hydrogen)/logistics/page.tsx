@@ -1,5 +1,5 @@
 import LogisticsDashboard from '@/app/shared/logistics/dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Logistics'),

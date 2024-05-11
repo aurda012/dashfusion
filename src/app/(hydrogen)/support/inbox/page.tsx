@@ -4,7 +4,7 @@ import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import { TabList } from '@/app/shared/support/inbox/inbox-tabs';
 import SupportInbox from '@/app/shared/support/inbox';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Support Inbox'),

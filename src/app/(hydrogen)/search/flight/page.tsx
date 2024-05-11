@@ -2,7 +2,7 @@ import ListingFilters from '@/app/shared/explore-flight';
 import FindFlight from '@/app/shared/explore-flight/listing-filters/find-flight';
 import PageHeader from '@/app/shared/page-header';
 import { routes } from '@/config/routes';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Real State'),

@@ -1,5 +1,5 @@
 import { Schema, model, models, Types } from 'mongoose';
-import { ILane, ILaneWithTicketsAndTags } from './lane.model';
+import { ILaneWithTicketsAndTags } from './lane.model';
 
 export interface IBoard {
   _id: string;

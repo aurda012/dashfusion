@@ -1,6 +1,6 @@
 import SignInForm from './sign-in-form';
 import AuthWrapperThree from '@/app/shared/auth-layout/auth-wrapper-three';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Sign In 3'),

@@ -1,6 +1,6 @@
 import ProfileHeader from '@/app/shared/profile/profile-header';
 import ProfileDetails from '@/app/shared/profile/profile-details';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Profile'),

@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import CreateOrder from '@/app/shared/ecommerce/order/create-order';
 import ImportButton from '@/app/shared/import-button';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Create Order'),

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import BackButton from '@/app/shared/support/inbox/back-button';
 import MessageList from '@/app/shared/support/inbox/message-list';
 import MessageDetails from '@/app/shared/support/inbox/message-details';

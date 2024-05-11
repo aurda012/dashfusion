@@ -4,7 +4,7 @@ import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import SnippetsTable from '@/app/shared/support/snippets/table';
 import HeaderAction from '../header-action';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Snippets'),

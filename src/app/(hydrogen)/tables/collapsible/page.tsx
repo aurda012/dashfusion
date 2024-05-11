@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import { orderData } from '@/data/order-data';
 import OrderTable from '@/app/shared/ecommerce/order/order-list/table';
 import TableLayout from '@/app/(hydrogen)/tables/table-layout';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Collapsible Table'),

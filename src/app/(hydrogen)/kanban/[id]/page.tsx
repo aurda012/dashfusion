@@ -4,18 +4,18 @@ import { redirect } from 'next/navigation';
 import {
   getBoardDetails,
   getUserBoards,
-} from '@/database/actions/board.actions';
+} from '@/modules/kanban/actions/board.actions';
 import {
   getLanesWithTicketsAndTags,
   updateLanesOrder,
   updateTicketsOrder,
-} from '@/database/actions/lane.actions';
+} from '@/modules/kanban/actions/lane.actions';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import BoardInfoBar from '@/components/kanban/BoardInfoBar';
-import BoardSettings from '@/components/forms/BoardSettings';
-import BoardView from '@/components/kanban/BoardView';
-import { createMetadata } from '@/config/site.config';
+import BoardInfoBar from '@/modules/kanban/components/BoardInfoBar';
+import BoardSettings from '@/modules/kanban/components/forms/BoardSettings';
+import BoardView from '@/modules/kanban/components/BoardView';
+import { createMetadata } from '@/config/site';
 import { getUser } from '@/database/actions/user.actions';
 import PageHeader from '@/app/shared/page-header';
 

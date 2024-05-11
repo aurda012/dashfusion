@@ -1,7 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { RadioGroup } from 'rizzui';
 import { updateThemeColor } from '@/utils/update-theme-color';
 import { presetDark, presetLight } from '@/config/color-presets';

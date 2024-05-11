@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import ExecutiveDashboard from '@/app/shared/executive';
 
 export const metadata = {

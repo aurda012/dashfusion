@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import hideRechartsConsoleError from '@/utils/recharts-console-error';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 

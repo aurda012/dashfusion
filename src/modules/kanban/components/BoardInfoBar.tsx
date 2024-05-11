@@ -14,8 +14,8 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { Command, CommandGroup } from '@/components/ui/command';
 import { cn } from '@/lib/utils';
 import CustomModal from '@/components/common/CustomModal';
-import BoardDetailsForm from '@/components/forms/BoardDetails';
-import { IBoard } from '@/database/models/board.model';
+import BoardDetailsForm from '@/modules/kanban/components/forms/BoardDetails';
+import { IBoard } from '@/modules/kanban/models/board.model';
 
 interface PipelineInfoBarProps {
   boardId: string;

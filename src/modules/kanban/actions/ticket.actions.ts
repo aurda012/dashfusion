@@ -1,12 +1,12 @@
 'use server';
 
-import { connectToDatabase } from '..';
+import { auth } from '@clerk/nextjs/server';
+import { connectToDatabase } from '@/database';
+import Activity from '@/database/models/activity';
+import User from '@/database/models/user.model';
 import Ticket, { ITicket, ITicketPopulated } from '../models/ticket.model';
 import Lane from '../models/lane.model';
 import Tag, { ITag } from '../models/tag.model';
-import User from '../models/user.model';
-import { auth } from '@clerk/nextjs/server';
-import Activity from '../models/activity';
 
 export const getTicketsWithTags = async (boardId: string) => {
   try {

@@ -8,7 +8,7 @@ import NewsLetterSeven from '@/app/shared/newsletter/newsletter-7/newsletter';
 import NewsLetterEight from '@/app/shared/newsletter/newsletter-8/newsletter';
 import PageHeader from '@/app/shared/page-header';
 import { routes } from '@/config/routes';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Newsletter'),

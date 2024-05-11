@@ -5,7 +5,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'react-hot-toast';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { deleteBoard, upsertBoard } from '@/database/actions/board.actions';
+import {
+  deleteBoard,
+  upsertBoard,
+} from '@/modules/kanban/actions/board.actions';
 
 import { useModal } from '@/hooks/use-modal';
 import {
@@ -28,15 +31,15 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Input } from '../ui/input';
-import { Button } from '../ui/button';
+import { Input } from '../../../../components/ui/input';
+import { Button } from '../../../../components/ui/button';
 
 import {
   CreateBoardValidator,
   type CreateBoardSchema,
-} from '@/lib/validators/create-board';
+} from '@/modules/kanban/validators/create-board';
 import { Types } from 'mongoose';
-import { IBoard } from '@/database/models/board.model';
+import { IBoard } from '@/modules/kanban/models/board.model';
 import { Text } from 'rizzui';
 import { saveActivity } from '@/database/actions/activity.actions';
 

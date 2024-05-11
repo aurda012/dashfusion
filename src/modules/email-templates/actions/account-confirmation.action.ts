@@ -2,7 +2,7 @@
 
 import { render } from '@react-email/render';
 import { sendEmail } from '@/utils/email';
-import AccountConfirmationEmail from '@/email-templates/account-confirmation';
+import AccountConfirmationEmail from '@/modules/email-templates/components/account-confirmation';
 
 export const sendAccountConfirmationEmail = async (data: { email: string }) => {
   const to = `John Doe<${data.email}>`;

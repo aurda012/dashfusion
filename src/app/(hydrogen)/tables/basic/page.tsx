@@ -7,7 +7,7 @@ import { getColumns as getOrderColumns } from '@/app/shared/ecommerce/order/orde
 import { getColumns as getProductColumns } from '@/app/shared/ecommerce/product/product-list/columns';
 import BasicTableWidget from '@/components/controlled-table/basic-table-widget';
 import TableLayout from '@/app/(hydrogen)/tables/table-layout';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Basic Table'),

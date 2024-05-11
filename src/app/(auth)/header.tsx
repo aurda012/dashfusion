@@ -6,7 +6,7 @@ import { FiSave } from 'react-icons/fi';
 import { Button } from 'rizzui';
 import cn from '@/utils/class-names';
 import { useMedia } from '@/hooks/use-media';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 
 interface FooterProps {
   className?: string;

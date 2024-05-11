@@ -7,8 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Button, Input } from 'rizzui';
 import { messages } from '@/config/messages';
-import { sendOrderConfirmationEmail } from '@/server/actions/order-confirmation.action';
-import { sendAccountConfirmationEmail } from '@/server/actions/account-confirmation.action';
+import { sendOrderConfirmationEmail } from '@/modules/email-templates/actions/order-confirmation.action';
+import { sendAccountConfirmationEmail } from '@/modules/email-templates/actions/account-confirmation.action';
 import { useModal } from '@/app/shared/modal-views/use-modal';
 import {
   EmailTemplateInput,

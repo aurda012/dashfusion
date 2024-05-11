@@ -4,7 +4,7 @@ import { routes } from '@/config/routes';
 import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import ReviewsTable from '@/app/shared/ecommerce/review/table';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Reviews'),

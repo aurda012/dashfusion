@@ -4,7 +4,7 @@ import { PiPlusBold } from 'react-icons/pi';
 import { productData } from '@/app/shared/ecommerce/product/create-edit/form-utils';
 import CreateEditProduct from '@/app/shared/ecommerce/product/create-edit';
 import PageHeader from '@/app/shared/page-header';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import { Button } from 'rizzui';
 import { routes } from '@/config/routes';
 

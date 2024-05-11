@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import EventCalendarView from '@/app/shared/event-calendar';
 import ExportButton from '@/app/shared/export-button';
 import ModalButton from '@/app/shared/modal-button';

@@ -9,7 +9,7 @@ import {
   deleteTag,
   getTagsForUser,
   upsertTag,
-} from '@/database/actions/tag.actions';
+} from '@/modules/kanban/actions/tag.actions';
 
 import {
   AlertDialog,
@@ -21,7 +21,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '../ui/alert-dialog';
+} from '../../../../components/ui/alert-dialog';
 import {
   Command,
   CommandEmpty,
@@ -30,10 +30,10 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from '../ui/command';
-import { Tag } from '../ui/tag';
+} from '../../../../components/ui/command';
+import { Tag } from '../../../../components/ui/tag';
 import { cn } from '@/lib/utils';
-import { ITag } from '@/database/models/tag.model';
+import { ITag } from '@/modules/kanban/models/tag.model';
 import { Types } from 'mongoose';
 import { Text } from 'rizzui';
 import { saveActivity } from '@/database/actions/activity.actions';

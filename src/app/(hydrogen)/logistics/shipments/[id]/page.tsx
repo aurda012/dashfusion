@@ -7,7 +7,7 @@ import InvoiceDetails from '@/app/shared/logistics/shipment/details/invoice-deta
 import DeliveryDetails from '@/app/shared/logistics/shipment/details/delivery-details';
 import TrackingHistory from '@/app/shared/logistics/shipment/details/tracking-history';
 import ShippingDetails from '@/app/shared/logistics/shipment/details/shipping-details';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Shipment Details'),

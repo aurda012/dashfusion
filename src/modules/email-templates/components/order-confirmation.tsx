@@ -1,4 +1,3 @@
-import { formatDate } from '@/utils/format-date';
 import { Html } from '@react-email/html';
 import { Body } from '@react-email/body';
 import { Container } from '@react-email/container';

@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import ChartWidgets from '@/app/shared/chart-widgets';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Charts'),

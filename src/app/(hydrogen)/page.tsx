@@ -1,5 +1,5 @@
 import FileDashboard from '@/app/shared/file/dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject(),

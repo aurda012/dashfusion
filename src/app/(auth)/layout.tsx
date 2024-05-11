@@ -3,7 +3,7 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import { useTheme } from 'next-themes';
 import { dark } from '@clerk/themes';
-import DarkModeSwitcher from '@/components/shared/dark-mode-switcher';
+import DarkModeSwitcher from '@/components/common/dark-mode-switcher';
 import Header from './header';
 
 export default function AuthLayout({

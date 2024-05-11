@@ -1,6 +1,6 @@
 import AuthWrapperFour from '@/app/shared/auth-layout/auth-wrapper-four';
 import SignUpForm from './sign-up-form';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Sign Up 4'),

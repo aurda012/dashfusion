@@ -1,5 +1,5 @@
 import FinancialDashboard from '@/app/shared/financial/dashboard';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Financial'),

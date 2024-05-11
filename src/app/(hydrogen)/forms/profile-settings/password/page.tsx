@@ -1,4 +1,4 @@
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import PasswordSettingsView from '@/app/shared/account-settings/password-settings';
 
 export const metadata = {

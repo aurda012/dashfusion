@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import EmailTemplatesGrid from '@/app/shared/email-templates';
 
 export const metadata = {

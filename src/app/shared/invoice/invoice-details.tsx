@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { Badge, Title, Text } from 'rizzui';
 import Table from '@/components/ui/table';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 
 const invoiceItems = [
   {

@@ -2,7 +2,7 @@ import AuthWrapperFive from '@/app/shared/auth-layout/auth-wrapper-five';
 import SignInForm from './sign-in-form';
 import Image from 'next/image';
 import WaveShape from '@/components/shape/wave';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Sign In 5'),

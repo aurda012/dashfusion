@@ -1,5 +1,5 @@
 import ProfileSettingsView from '@/app/shared/account-settings/profile-settings';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Profile'),

@@ -8,12 +8,12 @@ import { Flag, Plus } from 'lucide-react';
 import { useModal } from '@/hooks/use-modal';
 import { Button } from '@/components/ui/button';
 import CustomModal from '@/components/common/CustomModal';
-import LaneDetails from '@/components/forms/LaneDetails';
+import LaneDetails from '@/modules/kanban/components/forms/LaneDetails';
 import PipelineLane from './BoardLane';
 
-import { ILaneWithTicketsAndTags } from '@/database/models/lane.model';
-import { ITicketPopulated } from '@/database/models/ticket.model';
-import { IBoard } from '@/database/models/board.model';
+import { ILaneWithTicketsAndTags } from '@/modules/kanban/models/lane.model';
+import { ITicketPopulated } from '@/modules/kanban/models/ticket.model';
+import { IBoard } from '@/modules/kanban/models/board.model';
 
 interface BoardViewProps {
   lanes: ILaneWithTicketsAndTags[];

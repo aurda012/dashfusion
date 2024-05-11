@@ -4,8 +4,8 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 
 import { AlertDialog } from '@/components/ui/alert-dialog';
-import BoardDetails from '@/components/forms/BoardDetails';
-import { IBoard } from '@/database/models/board.model';
+import BoardDetails from '@/modules/kanban/components/forms/BoardDetails';
+import { IBoard } from '@/modules/kanban/models/board.model';
 
 const BoardSettings = ({
   boardId,

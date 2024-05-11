@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import CreateInvoice from '@/app/shared/invoice/create-invoice';
 import ImportButton from '@/app/shared/import-button';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import { Metadata } from 'next';
 
 type Props = {

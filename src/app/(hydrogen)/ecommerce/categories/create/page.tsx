@@ -3,7 +3,7 @@ import PageHeader from '@/app/shared/page-header';
 import { Button } from 'rizzui';
 import { routes } from '@/config/routes';
 import Link from 'next/link';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Create a Category'),

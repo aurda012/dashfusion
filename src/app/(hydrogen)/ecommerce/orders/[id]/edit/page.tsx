@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { routes } from '@/config/routes';
 import { Button } from 'rizzui';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import PageHeader from '@/app/shared/page-header';
 import CreateOrder from '@/app/shared/ecommerce/order/create-order';
 import { orderData } from '@/app/shared/ecommerce/order/order-form/form-utils';

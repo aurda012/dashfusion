@@ -13,7 +13,7 @@ import {
 } from 'react-icons/pi';
 import { FcGoogle } from 'react-icons/fc';
 import TreeShape from '@/components/shape/tree';
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 
 const socialShare = [
   {

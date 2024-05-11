@@ -3,7 +3,7 @@ import { Button } from 'rizzui';
 import PageHeader from '@/app/shared/page-header';
 import BasicMap from './basic-map';
 import CustomMap from './custom-map';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Maps'),

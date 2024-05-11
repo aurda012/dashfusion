@@ -2,7 +2,7 @@ import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import CustomerProfile from '@/app/shared/logistics/customer-profile';
 import EditProfileButton from '@/app/shared/logistics/customer-profile/edit-profile';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Customer Profile'),

@@ -1,7 +1,7 @@
 import ShipmentStats from '@/app/shared/logistics/shipment/shipment-stats';
 import ShipmentListTable from '@/app/shared/logistics/shipment/list/table';
 import ShipmentPageHeader from '@/app/(hydrogen)/logistics/shipments/page-header';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 
 export const metadata = {
   ...metaObject('Shipments'),

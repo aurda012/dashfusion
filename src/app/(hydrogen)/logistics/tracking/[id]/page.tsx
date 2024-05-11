@@ -4,7 +4,7 @@ import PageHeader from '@/app/shared/page-header';
 import ShippingInfo from '@/app/shared/logistics/tracking/shipping-info';
 import TrackingOverview from '@/app/shared/logistics/tracking/tracking-overview';
 import TrackingHistory from '@/app/shared/logistics/tracking/tracking-history';
-import { metaObject } from '@/config/site.config';
+import { metaObject } from '@/config/site';
 import { Metadata } from 'next';
 
 type Props = {

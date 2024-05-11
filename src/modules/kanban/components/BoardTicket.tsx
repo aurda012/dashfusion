@@ -5,7 +5,7 @@ import { Edit, MoreHorizontal, Trash } from 'lucide-react';
 import { format } from 'date-fns';
 import { toast } from 'react-hot-toast';
 
-import { deleteTicket } from '@/database/actions/ticket.actions';
+import { deleteTicket } from '@/modules/kanban/actions/ticket.actions';
 
 import { useModal } from '@/hooks/use-modal';
 import {
@@ -35,10 +35,10 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Tag } from '@/components/ui/tag';
 import CustomModal from '@/components/common/CustomModal';
-import TicketDetails from '@/components/forms/TicketDetails';
+import TicketDetails from '@/modules/kanban/components/forms/TicketDetails';
 
-import { ITicketPopulated } from '@/database/models/ticket.model';
-import { ITag } from '@/database/models/tag.model';
+import { ITicketPopulated } from '@/modules/kanban/models/ticket.model';
+import { ITag } from '@/modules/kanban/models/tag.model';
 import { Text } from 'rizzui';
 
 interface BoardTicketProps {

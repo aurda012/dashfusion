@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site.config';
+import { siteConfig } from '@/config/site';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
