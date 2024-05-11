@@ -20,6 +20,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
   CommandSeparator,
 } from '@/components/ui/command';
 import { Badge } from '@/components/ui/badge';
@@ -212,6 +213,7 @@ export const WatchProvidersField = () => {
                         .placeholder
                     }
                     ref={inputRef}
+                    className="focus:border-none focus:outline-none"
                   />
 
                   <ScrollArea className="max-h-[300px] overflow-auto">
@@ -222,7 +224,7 @@ export const WatchProvidersField = () => {
                       }
                     </CommandEmpty>
 
-                    <CommandGroup>
+                    <CommandList>
                       {selectableWatchProviders.map(
                         (selectableWatchProvider) => {
                           return (
@@ -247,7 +249,7 @@ export const WatchProvidersField = () => {
                           );
                         }
                       )}
-                    </CommandGroup>
+                    </CommandList>
                   </ScrollArea>
 
                   {selectedWatchProviders.length > 0 && (

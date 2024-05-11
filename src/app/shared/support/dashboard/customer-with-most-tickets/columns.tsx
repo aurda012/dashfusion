@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Area, AreaChart, ResponsiveContainer } from 'recharts';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Checkbox, Button, ActionIcon, Tooltip } from 'rizzui';
 import { getRelativeTime } from '@/utils/get-relative-time';
 import { StatusType } from '@/data/customer-with-most-tickets';

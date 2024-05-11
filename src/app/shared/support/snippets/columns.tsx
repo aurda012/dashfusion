@@ -8,7 +8,7 @@ import {
   Tooltip,
   ActionIcon,
 } from 'rizzui';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import TrashIcon from '@/components/icons/trash';
 import PencilIcon from '@/components/icons/pencil';
 import { useModal } from '@/app/shared/modal-views/use-modal';

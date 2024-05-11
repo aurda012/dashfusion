@@ -1,6 +1,6 @@
 'use client';
 
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Text, Checkbox, ActionIcon, Tooltip } from 'rizzui';
 import cn from '@/utils/class-names';
 import { StatusType } from '@/data/transaction-history';

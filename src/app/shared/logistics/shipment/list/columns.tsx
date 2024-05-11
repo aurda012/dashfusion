@@ -1,4 +1,4 @@
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Checkbox, Badge, Tooltip, ActionIcon } from 'rizzui';
 import { shippingStatuses, StatusType } from '@/data/shipment-data';
 import DateCell from '@/components/ui/date-cell';

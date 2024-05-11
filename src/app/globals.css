@@ -338,6 +338,15 @@
   }
 }
 
+input[cmdk-input] {
+  @apply !border-none !shadow-none !ring-0 focus:!border-none;
+}
+
+/* Shadcn-ui Select */
+[data-radix-popper-content-wrapper] {
+  @apply z-[1000];
+}
+
 /* ................................................... */
 /* scrollbar design starts from here */
 /* ................................................... */

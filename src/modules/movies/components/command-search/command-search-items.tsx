@@ -29,7 +29,7 @@ export const CommandSearchMovie = ({
     <HoverCard>
       <HoverCardTrigger>
         <Link
-          href={`/${language}/movies/${item.id}`}
+          href={`/movies/${item.id}`}
           className="flex cursor-pointer items-center justify-between gap-4 rounded-sm p-2 hover:bg-muted"
         >
           <span className="truncate whitespace-nowrap text-sm">
@@ -92,7 +92,7 @@ export const CommandSearchTvSerie = ({
       <HoverCardTrigger>
         <Link
           className="flex cursor-pointer items-center justify-between gap-4 rounded-sm p-2 hover:bg-muted"
-          href={`/${language}/tv-series/${item.id}`}
+          href={`/movies/tv-series/${item.id}`}
         >
           <span className="truncate whitespace-nowrap text-sm">
             {item.name}
@@ -147,7 +147,7 @@ export const CommandSearchPerson = ({
   return (
     <Link
       className="flex items-center gap-2 rounded-md px-2 py-2 hover:bg-muted"
-      href={`/${language}/people/${item.id}`}
+      href={`/movies/people/${item.id}`}
     >
       <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border border-muted-foreground">
         {item.profile_path ? (

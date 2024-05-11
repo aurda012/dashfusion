@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { routes } from '@/config/routes';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Checkbox, Title, Text, Tooltip, ActionIcon } from 'rizzui';
 import PencilIcon from '@/components/icons/pencil';
 import DeletePopover from '@/app/shared/delete-popover';

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Checkbox, Title, Text, Tooltip, ActionIcon, Badge } from 'rizzui';
 import cn from '@/utils/class-names';
 import PencilIcon from '@/components/icons/pencil';

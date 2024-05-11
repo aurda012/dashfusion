@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Text } from 'rizzui';
 import cn from '@/utils/class-names';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import BasicTableWidget from '@/components/controlled-table/basic-table-widget';
 
 interface PersonalInfoProps {

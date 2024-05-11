@@ -2,7 +2,7 @@
 
 import { STATUSES, type User } from '@/data/users-data';
 import { Text, Badge, Tooltip, Checkbox, ActionIcon } from 'rizzui';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import EyeIcon from '@/components/icons/eye';
 import PencilIcon from '@/components/icons/pencil';
 import AvatarCard from '@/components/ui/avatar-card';

@@ -8,7 +8,7 @@ import {
   Tooltip,
   ActionIcon,
 } from 'rizzui';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import TrashIcon from '@/components/icons/trash';
 import PencilIcon from '@/components/icons/pencil';
 import { useModal } from '@/app/shared/modal-views/use-modal';
@@ -175,72 +175,72 @@ function RenderAction({
 }) {
   const { openModal } = useModal();
   return (
-      <div className="flex items-center justify-end gap-3 pe-4">
-        <Tooltip
+    <div className="flex items-center justify-end gap-3 pe-4">
+      <Tooltip
+        size="sm"
+        content={'View/Edit template'}
+        placement="top"
+        color="invert"
+      >
+        <ActionIcon
           size="sm"
-          content={'View/Edit template'}
-          placement="top"
-          color="invert"
+          variant="outline"
+          onClick={() =>
+            openModal({
+              view: (
+                <CreateSnippetTemplateForm
+                  type="Edit"
+                  title="template"
+                  data={row}
+                />
+              ),
+              customSize: '850px',
+            })
+          }
         >
-          <ActionIcon
-            size="sm"
-            variant="outline"
-            onClick={() =>
-              openModal({
-                view: (
-                  <CreateSnippetTemplateForm
-                    type="Edit"
-                    title="template"
-                    data={row}
-                  />
-                ),
-                customSize: '850px',
-              })
-            }
-          >
-            <PencilIcon className="h-4 w-4" />
-          </ActionIcon>
-        </Tooltip>
+          <PencilIcon className="h-4 w-4" />
+        </ActionIcon>
+      </Tooltip>
 
-        <Popover placement="left">
-          <Popover.Trigger>
-            <ActionIcon size="sm" variant="outline">
-              <TrashIcon className="h-4 w-4" />
-            </ActionIcon>
-          </Popover.Trigger>
-          <Popover.Content className="!z-0">
-            {({ setOpen }) => (
-              <div className="w-56 pb-2 pt-1 text-left rtl:text-right">
-                <Title
-                  as="h6"
-                  className="mb-0.5 flex items-start text-sm sm:items-center"
+      <Popover placement="left">
+        <Popover.Trigger>
+          <ActionIcon size="sm" variant="outline">
+            <TrashIcon className="h-4 w-4" />
+          </ActionIcon>
+        </Popover.Trigger>
+        <Popover.Content className="!z-0">
+          {({ setOpen }) => (
+            <div className="w-56 pb-2 pt-1 text-left rtl:text-right">
+              <Title
+                as="h6"
+                className="mb-0.5 flex items-start text-sm sm:items-center"
+              >
+                <PiWarning className="text me-2 h-6 w-6" /> Delete template!
+              </Title>
+              <Text className="mt-2 leading-relaxed">
+                Are you sure you want to delete this template?
+              </Text>
+              <div className="mt-2 flex items-center justify-end gap-1.5">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="h-7"
+                  onClick={() => setOpen(false)}
                 >
-                  <PiWarning className="text me-2 h-6 w-6" /> Delete template!
-                </Title>
-                <Text className="mt-2 leading-relaxed">
-                  Are you sure you want to delete this template?
-                </Text>
-                <div className="mt-2 flex items-center justify-end gap-1.5">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="h-7"
-                    onClick={() => setOpen(false)}
-                  >
-                    No
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="h-7"
-                    onClick={() => onDeleteItem(row.id)}
-                  >
-                    Yes
-                  </Button>
-                </div>
+                  No
+                </Button>
+                <Button
+                  size="sm"
+                  className="h-7"
+                  onClick={() => onDeleteItem(row.id)}
+                >
+                  Yes
+                </Button>
               </div>
-            )}
-          </Popover.Content>
-        </Popover>
-      </div>
+            </div>
+          )}
+        </Popover.Content>
+      </Popover>
+    </div>
   );
 }

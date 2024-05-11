@@ -1,5 +1,5 @@
 'use client';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Text, Checkbox, ActionIcon, Tooltip, Select } from 'rizzui';
 import PencilIcon from '@/components/icons/pencil';
 import EyeIcon from '@/components/icons/eye';

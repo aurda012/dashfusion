@@ -1,6 +1,6 @@
 'use client';
 
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import {
   Text,
   Checkbox,

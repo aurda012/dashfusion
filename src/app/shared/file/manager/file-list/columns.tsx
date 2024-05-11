@@ -8,7 +8,7 @@ import {
   PiShareFat,
   PiTrashSimple,
 } from 'react-icons/pi';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Title, Text, Checkbox, ActionIcon, Button, Popover } from 'rizzui';
 import Favorite from '@/app/shared/file/manager/favorite';
 

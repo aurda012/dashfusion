@@ -1,6 +1,6 @@
 'use client';
 
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Text, Checkbox, Badge } from 'rizzui';
 import TableAvatar from '@/components/ui/avatar-card';
 import DateCell from '@/components/ui/date-cell';

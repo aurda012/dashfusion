@@ -5,7 +5,7 @@ import ButtonGroupAction from '@/components/charts/button-group-action';
 import { DatePicker } from '@/components/ui/datepicker';
 import { Title, Loader } from 'rizzui';
 import cn from '@/utils/class-names';
-import Table from '@/components/ui/table';
+import Table from '@/components/ui/Table/table';
 import Pagination from '@/components/ui/pagination';
 import { pageMetricData } from '@/data/page-metrics-data';
 import { getColumns } from '@/app/shared/analytics-dashboard/page-metric/columns';
@@ -53,7 +53,7 @@ export default function PageMetrics({
   return (
     <div
       className={cn(
-        'rounded-xl border border-muted bg-gray-0 p-5 lg:p-7 dark:bg-gray-50',
+        'rounded-xl border border-muted bg-gray-0 p-5 dark:bg-gray-50 lg:p-7',
         className
       )}
     >

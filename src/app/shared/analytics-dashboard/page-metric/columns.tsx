@@ -1,6 +1,6 @@
 'use client';
 
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import { Badge, Title, Text } from 'rizzui';
 import dayjs from 'dayjs';
 import { ResponsiveContainer, BarChart, Bar } from 'recharts';

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { HeaderCell } from '@/components/ui/table';
+import { HeaderCell } from '@/components/ui/Table/table';
 import {
   Badge,
   Text,

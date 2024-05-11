@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Table from '@/components/ui/table';
+import Table from '@/components/ui/Table/table';
 import Pagination from '@/components/ui/pagination';
 import WidgetCard from '@/components/cards/widget-card';
 import { PiMagnifyingGlassBold } from 'react-icons/pi';

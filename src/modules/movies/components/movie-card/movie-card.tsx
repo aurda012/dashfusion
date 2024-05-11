@@ -33,7 +33,7 @@ export const MovieCard = ({ movie, language = 'en-US' }: MovieCardProps) => {
 
   return (
     <Link
-      href={`/${language}/movies/${id}`}
+      href={`/movies/${id}`}
       className="w-full cursor-pointer space-y-2"
       data-testid="movie-card"
     >
