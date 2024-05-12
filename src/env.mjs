@@ -35,6 +35,12 @@ export const env = createEnv({
 
     UPLOADTHING_SECRET: z.string().min(1),
     UPLOADTHING_APP_ID: z.string().min(1),
+
+    AUTH_BEARER_TOKEN: z.string().min(1),
+    TEAM_ID_VERCEL: z.string().min(1),
+    PROJECT_ID_VERCEL: z.string().min(1),
+
+    OPENAI_API_KEY: z.string().min(1),
   },
   /*
    * Environment variables available on the client (and server).
@@ -47,6 +53,8 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().min(1),
     NEXT_PUBLIC_TMDB_API_KEY: z.string().min(1),
     NEXT_PUBLIC_URL: z.string().url(),
+    NEXT_PUBLIC_TMDB_API_KEY: z.string().min(1),
+    NEXT_PUBLIC_ROOT_DOMAIN: z.string().min(1),
   },
   runtimeEnv: process.env,
 });

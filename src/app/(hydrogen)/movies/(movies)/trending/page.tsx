@@ -2,6 +2,7 @@ import { MovieList } from '@/modules/movies/components/movie-list';
 import { PageProps } from '@/modules/movies/types/languages';
 import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const TrendingMoviesPage = async ({ params: { lang } }: PageProps) => {
   const dictionary = await getDictionary('en-US');
@@ -22,3 +23,16 @@ const TrendingMoviesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default TrendingMoviesPage;
+
+export const metadata = createMetadata(
+  'Trending Movies | dashfusion',
+  'Discover movies everyone is watching right now.',
+  [
+    'next.js',
+    'nextjs',
+    'movies app',
+    'discover movies',
+    'movies',
+    'trending movies',
+  ]
+);

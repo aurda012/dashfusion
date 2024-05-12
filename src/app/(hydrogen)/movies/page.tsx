@@ -4,6 +4,7 @@ import { MoviesListFilters } from '@/modules/movies/components/movies-list-filte
 import { MovieList } from '@/modules/movies/components/movie-list';
 import { Metadata } from 'next';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const DiscoverMoviesPage = async () => {
   const dictionary = await getDictionary('en-US');
@@ -30,3 +31,9 @@ const DiscoverMoviesPage = async () => {
 };
 
 export default DiscoverMoviesPage;
+
+export const metadata = createMetadata(
+  'Discover Movies | dashfusion',
+  'Discover movies based on your unique filters.',
+  ['next.js', 'nextjs', 'movies app', 'discover', 'movies']
+);

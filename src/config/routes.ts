@@ -53,6 +53,9 @@ export const routes = {
   kanban: {
     dashboard: '/kanban',
   },
+  movies: {
+    dashboard: '/movies',
+  },
   executive: {
     dashboard: '/executive',
   },

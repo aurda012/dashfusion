@@ -2,6 +2,7 @@ import { TvSeriesList } from '@/modules/movies/components/tv-series-list';
 import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { PageProps } from '@/modules/movies/types/languages';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const OnTheAirTvSeriesPage = async ({ params: { lang } }: PageProps) => {
   const {
@@ -25,3 +26,9 @@ const OnTheAirTvSeriesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default OnTheAirTvSeriesPage;
+
+export const metadata = createMetadata(
+  'Shows On The Air | dashfusion',
+  'Discover shows on the air! Find out what to watch next.',
+  ['next.js', 'nextjs', 'tv shows app', 'discover shows', 'shows']
+);

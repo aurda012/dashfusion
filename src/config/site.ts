@@ -3,6 +3,7 @@ import logoImg from '@public/logo.svg';
 import { LAYOUT_OPTIONS } from '@/config/enums';
 import logoIconImg from '@public/logo-short.svg';
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
+import { ReferrerEnum } from 'next/dist/lib/metadata/types/metadata-types';
 
 enum MODE {
   DARK = 'dark',
@@ -51,7 +52,7 @@ export const createMetadata = (
   return {
     generator: 'CodeLounge',
     applicationName: 'CodeLounge',
-    referrer: 'origin-when-cross-origin',
+    referrer: 'origin-when-cross-origin' as ReferrerEnum,
     title: title,
     description: description,
     keywords: keywords,

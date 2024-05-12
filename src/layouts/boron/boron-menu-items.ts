@@ -43,6 +43,7 @@ import {
   PiShapesDuotone,
   PiNewspaperClippingDuotone,
   PiKanban,
+  PiFilmReel,
 } from 'react-icons/pi';
 import { routes } from '@/config/routes';
 import { DUMMY_ID } from '@/config/constants';
@@ -315,6 +316,11 @@ export const menuItems = [
     name: 'Kanban',
     href: routes.kanban.dashboard,
     icon: PiKanban,
+  },
+  {
+    name: 'Movies',
+    href: routes.movies.dashboard,
+    icon: PiFilmReel,
   },
   // label start
   {

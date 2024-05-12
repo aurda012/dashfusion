@@ -3,6 +3,7 @@ import { TvSeriesListFilters } from '@/modules/movies/components/tv-series-list-
 import { PageProps } from '@/modules/movies/types/languages';
 import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const DiscoverTvSeriesPage = async ({ params: { lang } }: PageProps) => {
   const {
@@ -28,3 +29,9 @@ const DiscoverTvSeriesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default DiscoverTvSeriesPage;
+
+export const metadata = createMetadata(
+  'Discover Shows | dashfusion',
+  'Discover shows based on your unique filters! Find out what to watch next.',
+  ['next.js', 'nextjs', 'tv shows app', 'discover shows', 'shows']
+);

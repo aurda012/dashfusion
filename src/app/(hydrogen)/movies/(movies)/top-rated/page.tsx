@@ -2,6 +2,7 @@ import { MovieList } from '@/modules/movies/components/movie-list';
 import { PageProps } from '@/modules/movies/types/languages';
 import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const TopRatedMoviesPage = async ({ params: { lang } }: PageProps) => {
   const dictionary = await getDictionary(lang);
@@ -24,3 +25,16 @@ const TopRatedMoviesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default TopRatedMoviesPage;
+
+export const metadata = createMetadata(
+  'Top-Rated Movies | dashfusion',
+  'Discover top-rated movies.',
+  [
+    'next.js',
+    'nextjs',
+    'movies app',
+    'discover movies',
+    'movies',
+    'top-rated movies',
+  ]
+);

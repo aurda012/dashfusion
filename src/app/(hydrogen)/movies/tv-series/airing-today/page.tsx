@@ -2,6 +2,7 @@ import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { PageProps } from '@/modules/movies/types/languages';
 import { TvSeriesList } from '@/modules/movies/components/tv-series-list';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const AiringTodayTvSeriesPage = async ({ params: { lang } }: PageProps) => {
   const {
@@ -25,3 +26,9 @@ const AiringTodayTvSeriesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default AiringTodayTvSeriesPage;
+
+export const metadata = createMetadata(
+  'Shows Airing Today | dashfusion',
+  'Discover shows airing today! Find out what to watch next.',
+  ['next.js', 'nextjs', 'tv shows app', 'discover shows', 'shows']
+);

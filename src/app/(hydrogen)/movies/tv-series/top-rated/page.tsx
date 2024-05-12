@@ -2,6 +2,7 @@ import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { PageProps } from '@/modules/movies/types/languages';
 import { TvSeriesList } from '@/modules/movies/components/tv-series-list';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const TopRatedTvSeriesPage = async ({ params: { lang } }: PageProps) => {
   const {
@@ -25,3 +26,9 @@ const TopRatedTvSeriesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default TopRatedTvSeriesPage;
+
+export const metadata = createMetadata(
+  'Top-Rated Shows | dashfusion',
+  'Discover top rated shows! Find out what to watch next.',
+  ['next.js', 'nextjs', 'tv shows app', 'discover shows', 'shows']
+);

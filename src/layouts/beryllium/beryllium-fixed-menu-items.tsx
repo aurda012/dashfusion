@@ -52,6 +52,7 @@ import {
   PiShapes,
   PiNewspaperClippingDuotone,
   PiKanban,
+  PiFilmReel,
 } from 'react-icons/pi';
 import { atom } from 'jotai';
 
@@ -323,12 +324,17 @@ export const berylliumMenuItems: MenuItemsType[] = [
         name: 'Invoice Builder',
         href: routes.invoice.builder,
         icon: PiNewspaperClippingDuotone,
-        badge: 'NEW',
       },
       {
         name: 'Kanban',
         href: routes.kanban.dashboard,
         icon: PiKanban,
+        badge: 'NEW',
+      },
+      {
+        name: 'Movies',
+        href: routes.movies.dashboard,
+        icon: PiFilmReel,
         badge: 'NEW',
       },
     ],

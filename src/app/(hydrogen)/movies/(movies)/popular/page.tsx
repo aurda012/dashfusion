@@ -2,6 +2,7 @@ import { MovieList } from '@/modules/movies/components/movie-list';
 import { PageProps } from '@/modules/movies/types/languages';
 import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const PopularMoviesPage = async ({ params: { lang } }: PageProps) => {
   const dictionary = await getDictionary(lang);
@@ -24,3 +25,16 @@ const PopularMoviesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default PopularMoviesPage;
+
+export const metadata = createMetadata(
+  'Popular Movies | dashfusion',
+  'Discover movies based on popularity.',
+  [
+    'next.js',
+    'nextjs',
+    'movies app',
+    'discover movies',
+    'movies',
+    'popular movies',
+  ]
+);

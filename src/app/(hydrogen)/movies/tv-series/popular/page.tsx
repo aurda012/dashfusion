@@ -2,6 +2,7 @@ import { getDictionary } from '@/modules/movies/utils/dictionaries';
 import { PageProps } from '@/modules/movies/types/languages';
 import { TvSeriesList } from '@/modules/movies/components/tv-series-list';
 import { Container } from '@/modules/movies/components/container';
+import { createMetadata } from '@/config/site';
 
 const PopularTvSeriesPage = async ({ params: { lang } }: PageProps) => {
   const {
@@ -25,3 +26,9 @@ const PopularTvSeriesPage = async ({ params: { lang } }: PageProps) => {
 };
 
 export default PopularTvSeriesPage;
+
+export const metadata = createMetadata(
+  'Popular Shows | dashfusion',
+  'Discover shows everyone has watched! Find out what to watch next.',
+  ['next.js', 'nextjs', 'tv shows app', 'discover shows', 'shows']
+);
