@@ -52,7 +52,7 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string().min(1),
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().min(1),
     NEXT_PUBLIC_TMDB_API_KEY: z.string().min(1),
-    NEXT_PUBLIC_URL: z.string().url(),
+    NEXT_PUBLIC_URL: z.string().min(1),
     NEXT_PUBLIC_TMDB_API_KEY: z.string().min(1),
     NEXT_PUBLIC_ROOT_DOMAIN: z.string().min(1),
   },

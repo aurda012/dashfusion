@@ -1,5 +1,6 @@
 import { randomUUID } from 'crypto';
 import { Schema, model, models, Types } from 'mongoose';
+import { ISite } from './site.model';
 
 export interface IBlogPost {
   _id: string;
@@ -13,6 +14,21 @@ export interface IBlogPost {
   updatedAt: Date;
   published: boolean;
   site: string;
+  user: string;
+}
+
+export interface IBlogPostPopulated {
+  _id: string;
+  title: string;
+  description: string;
+  content: number;
+  slug: string;
+  image: string;
+  imageBlurhash: string;
+  createdAt: Date;
+  updatedAt: Date;
+  published: boolean;
+  site: ISite;
   user: string;
 }
 

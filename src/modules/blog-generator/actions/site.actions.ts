@@ -205,7 +205,7 @@ export const updateSite = async (
   }
 };
 
-export const deleteSite = async (_: FormData, site: Partial<ISite>) => {
+export const deleteSite = async (siteId: string) => {
   const { userId } = auth();
   if (!userId) {
     return {
@@ -218,6 +218,12 @@ export const deleteSite = async (_: FormData, site: Partial<ISite>) => {
     if (!user) {
       return {
         error: 'User not found',
+      };
+    }
+    const site = await Site.findById(siteId);
+    if (!site) {
+      return {
+        error: 'Site not found',
       };
     }
     if (site.user?.toString() !== user._id.toString()) {
@@ -233,8 +239,63 @@ export const deleteSite = async (_: FormData, site: Partial<ISite>) => {
       (await revalidateTag(`${site.customDomain}-metadata`));
     return JSON.parse(JSON.stringify(response));
   } catch (error: any) {
+    console.log(error.message);
     return {
       error: error.message,
     };
+  }
+};
+
+export const getSiteCount = async () => {
+  const { userId } = auth();
+  if (!userId) {
+    throw new Error('Not authenticated');
+  }
+  try {
+    await connectToDatabase();
+    const user = await User.findOne({ clerkId: userId });
+    const sites = await Site.countDocuments({
+      user: user._id,
+    });
+    return sites;
+  } catch (error: any) {
+    console.log(error.message);
+    throw new Error(error.message);
+  }
+};
+
+export const getSites = async (limit: number = 10) => {
+  const { userId } = auth();
+  if (!userId) {
+    throw new Error('Not authenticated');
+  }
+  try {
+    await connectToDatabase();
+    const user = await User.findOne({ clerkId: userId });
+    const sites = await Site.find({
+      user: user._id,
+    })
+      .sort({ createdAt: 'asc' })
+      .limit(limit);
+    return JSON.parse(JSON.stringify(sites)) as ISite[];
+  } catch (error: any) {
+    console.log(error.message);
+    throw new Error(error.message);
+  }
+};
+
+export const getSite = async (id: string) => {
+  const { userId } = auth();
+  if (!userId) {
+    throw new Error('Not authenticated');
+  }
+  try {
+    await connectToDatabase();
+    const user = await User.findOne({ clerkId: userId });
+    const site = await Site.findById(id);
+    return JSON.parse(JSON.stringify(site)) as ISite;
+  } catch (error: any) {
+    console.log(error.message);
+    throw new Error(error.message);
   }
 };

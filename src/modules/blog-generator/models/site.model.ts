@@ -4,7 +4,7 @@ export interface ISite {
   _id: string;
   name: string;
   description: string;
-  logo: number;
+  logo: string;
   font: string;
   image: string;
   imageBlurhash: string;

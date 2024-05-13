@@ -2,8 +2,11 @@
 
 import { revalidateTag, unstable_cache } from 'next/cache';
 import { connectToDatabase } from '@/database';
-import BlogPost, { IBlogPost } from '../models/blog-post.model';
-import { ISite } from '../models/site.model';
+import BlogPost, {
+  IBlogPost,
+  IBlogPostPopulated,
+} from '../models/blog-post.model';
+import Site, { ISite } from '../models/site.model';
 import { auth } from '@clerk/nextjs/server';
 import User from '@/database/models/user.model';
 import { utapi } from '@/server/uploadthing';
@@ -64,8 +67,8 @@ export async function getPostData(domain: string, slug: string) {
         if (!data) return null;
 
         const [mdxSource, adjacentPosts] = await Promise.all([
-          getMdxSource(data.content!),
-          BlogPost.find({
+          await getMdxSource(data.content!),
+          await BlogPost.find({
             site: subdomain ? { subdomain } : { customDomain: domain },
             published: true,
             _id: { $not: data._id },
@@ -111,24 +114,24 @@ export const getSiteFromPostId = async (postId: string) => {
     const post = await BlogPost.findOne({
       _id: postId,
     });
-    return JSON.parse(JSON.stringify(post.site));
+    return JSON.parse(JSON.stringify(post.site)) as string;
   } catch (error: any) {
     console.log(error.message);
     throw new Error(error.message);
   }
 };
 
-export const createPost = async (_: FormData, site: Partial<ISite>) => {
+export const createPost = async (siteId: string) => {
   const { userId } = auth();
   if (!userId) {
-    return {
-      error: 'Not authenticated',
-    };
+    throw new Error('User not found');
   }
 
   try {
     await connectToDatabase();
     const user = await User.findOne({ clerkId: userId });
+    const site = await Site.findById(siteId);
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -143,7 +146,7 @@ export const createPost = async (_: FormData, site: Partial<ISite>) => {
     );
     site.customDomain && (await revalidateTag(`${site.customDomain}-posts`));
 
-    return JSON.parse(JSON.stringify(response));
+    return JSON.parse(JSON.stringify(response)) as IBlogPost;
   } catch (error: any) {
     console.log(error.message);
     throw new Error(error.message);
@@ -280,7 +283,7 @@ export const updatePostMetadata = async (
   }
 };
 
-export const deletePost = async (_: FormData, post: Partial<IBlogPost>) => {
+export const deletePost = async (postId: string) => {
   const { userId } = auth();
   if (!userId) {
     return {
@@ -291,12 +294,35 @@ export const deletePost = async (_: FormData, post: Partial<IBlogPost>) => {
   try {
     await connectToDatabase();
 
-    const response = await BlogPost.findByIdAndDelete(post._id);
+    const response = await BlogPost.findByIdAndDelete(postId);
 
     return JSON.parse(JSON.stringify(response));
   } catch (error: any) {
+    console.log(error.message);
     return {
       error: error.message,
     };
+  }
+};
+
+export const getPosts = async (limit: number = 10, siteId?: string) => {
+  const { userId } = auth();
+  if (!userId) {
+    throw new Error('Not authenticated');
+  }
+  try {
+    await connectToDatabase();
+    const user = await User.findOne({ clerkId: userId });
+    const sites = await BlogPost.find({
+      user: user._id,
+      ...(siteId ? { siteId } : {}),
+    })
+      .sort({ createdAt: 'desc' })
+      .limit(limit)
+      .populate({ path: 'site', model: Site });
+    return JSON.parse(JSON.stringify(sites)) as IBlogPostPopulated[];
+  } catch (error: any) {
+    console.log(error.message);
+    throw new Error(error.message);
   }
 };

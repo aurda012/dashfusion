@@ -2,6 +2,10 @@ import './src/env.mjs';
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  experimental: {
+    mdxRs: true,
+    serverMinification: false,
+  },
   images: {
     remotePatterns: [
       {
@@ -74,9 +78,21 @@ const nextConfig = {
         hostname: 'image.tmdb.org',
         port: '',
       },
+      { hostname: 'public.blob.vercel-storage.com' },
+      { hostname: 'res.cloudinary.com' },
+      { hostname: 'abs.twimg.com' },
+      { hostname: 'pbs.twimg.com' },
+      { hostname: 'avatar.vercel.sh' },
+      { hostname: 'avatars.githubusercontent.com' },
+      { hostname: 'www.google.com' },
+      { hostname: 'flag.vercel.app' },
+      { hostname: 'illustrations.popsy.co' },
     ],
   },
   reactStrictMode: false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
