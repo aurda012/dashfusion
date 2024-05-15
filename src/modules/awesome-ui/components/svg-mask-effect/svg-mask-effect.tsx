@@ -28,6 +28,7 @@ export const MaskContainer = ({
     containerRef.current.addEventListener('mousemove', updateMousePosition);
     return () => {
       if (containerRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         containerRef.current.removeEventListener(
           'mousemove',
           updateMousePosition

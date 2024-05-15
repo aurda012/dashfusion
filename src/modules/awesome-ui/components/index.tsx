@@ -4,7 +4,8 @@ import { TabsDemo } from './animated-tabs';
 import AnimatedTooltipDemo from './animated-tooltip';
 import { AuroraBackgroundDemo } from './aurora-background';
 import { BackgroundBeamsDemo } from './background-beams';
-import { BackgroundGradientAnimationDemo } from './background-gradient';
+import { BackgroundBoxesDemo } from './background-boxes';
+import { BackgroundGradientAnimationDemo } from './gradient-animation';
 import { BentoGridDemo } from './bento-grid';
 import { CanvasRevealEffectDemo } from './canvas-reveal-effect';
 import { CardStackDemo } from './card-stack';
@@ -27,6 +28,9 @@ import { StickyScrollRevealDemo } from './sticky-scroll';
 import { SVGMaskEffectDemo } from './svg-mask-effect';
 import { TextRevealCardPreview } from './text-reveal-card';
 import TracingBeamDemo from './tracing-beam';
+import { BackgroundGradientDemo } from './background-gradient';
+import { DirectionAwareHoverDemo } from './direction-aware-hover';
+import { FollowingPointerDemo } from './following-pointer';
 
 export const components = [
   {
@@ -84,10 +88,10 @@ export const components = [
     component: <BackgroundBeamsDemo />,
   },
   {
-    name: 'Background Gradient',
+    name: 'Gradient Animation',
     description:
       'A smooth and elegant background gradient animation that changes the gradient position over time.',
-    path: '/awesome-ui/background-gradient-animation',
+    path: '/awesome-ui/gradient-animation',
     image: '/components/background-gradient-animation.webp',
     component: <BackgroundGradientAnimationDemo />,
   },
@@ -248,5 +252,37 @@ export const components = [
     path: '/awesome-ui/3d-animated-pin',
     image: '/components/3d-pin.webp',
     component: <AnimatedPinDemo />,
+  },
+  {
+    name: 'Background Boxes',
+    description:
+      'A full width background box container that highlights on hover',
+    path: '/awesome-ui/background-boxes',
+    image: '/components/background-boxes.webp',
+    component: <BackgroundBoxesDemo />,
+  },
+  {
+    name: 'Background Gradient',
+    description:
+      'An animated gradient that sits at the background of a card, button or anything.',
+    path: '/awesome-ui/background-gradient',
+    image: '/components/background-gradient.webp',
+    component: <BackgroundGradientDemo />,
+  },
+  {
+    name: 'Direction Aware Hover',
+    description:
+      'A direction aware hover effect using Framer Motion, Tailwindcss and good old javascript.',
+    path: '/awesome-ui/direction-aware-hover',
+    image: '/components/direction-aware-hover.webp',
+    component: <DirectionAwareHoverDemo />,
+  },
+  {
+    name: 'Following Pointer',
+    description:
+      'A custom pointer that follows mouse arrow and animates in pointer and content.',
+    path: '/awesome-ui/following-pointer',
+    image: '/components/following-pointer.webp',
+    component: <FollowingPointerDemo />,
   },
 ];

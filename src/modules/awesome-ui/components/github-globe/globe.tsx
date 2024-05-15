@@ -96,6 +96,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       _buildData();
       _buildMaterial();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globeRef.current]);
 
   const _buildMaterial = () => {
@@ -162,6 +163,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         });
       startAnimation();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globeData]);
 
   const startAnimation = () => {
@@ -221,6 +223,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globeRef.current, globeData]);
 
   return (
@@ -237,6 +240,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return null;
@@ -249,18 +253,23 @@ export function World(props: WorldProps) {
   return (
     <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
         color={globeConfig.directionalLeftLight}
+        // eslint-disable-next-line react/no-unknown-property
         position={new Vector3(-400, 100, 400)}
       />
       <directionalLight
         color={globeConfig.directionalTopLight}
+        // eslint-disable-next-line react/no-unknown-property
         position={new Vector3(-200, 500, 200)}
       />
       <pointLight
         color={globeConfig.pointLight}
+        // eslint-disable-next-line react/no-unknown-property
         position={new Vector3(-200, 500, 200)}
+        // eslint-disable-next-line react/no-unknown-property
         intensity={0.8}
       />
       <Globe {...props} />
