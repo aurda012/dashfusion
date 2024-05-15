@@ -85,6 +85,7 @@ const nextConfig = {
       { hostname: 'flag.vercel.app' },
       { hostname: 'illustrations.popsy.co' },
       { hostname: 'dashfusion.vercel.app' },
+      { hostname: 'aceternity.com' },
     ],
   },
   reactStrictMode: false,

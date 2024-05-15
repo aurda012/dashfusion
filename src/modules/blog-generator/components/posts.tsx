@@ -1,4 +1,3 @@
-import { redirect } from 'next/navigation';
 import PostCard from './post-card';
 import Image from 'next/image';
 import { getPosts } from '../actions/blog-post.actions';

@@ -19,7 +19,7 @@ export default async function MoviesLayout({ children }: MoviesLayoutProps) {
     <QueryWrapper>
       <LanguageContextProvider language="en-US" dictionary={dictionary}>
         <div className="flex flex-col">
-          <div className="w-full border-b bg-background p-4">
+          <div className="w-full border-b p-4">
             <div className="mx-auto w-full max-w-6xl">
               <Header dictionary={dictionary} />
             </div>

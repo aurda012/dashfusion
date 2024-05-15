@@ -250,17 +250,17 @@ export const lithiumMenuItems: LithiumMenuItem = {
           },
         ],
       },
-      {
-        name: 'Movies',
-        description: '"Discover Movies, Shows and More!"',
-        icon: 'TicketIcon',
-        subMenuItems: [
-          {
-            name: 'Discover',
-            href: routes.movies.dashboard,
-          },
-        ],
-      },
+      // {
+      //   name: 'Movies',
+      //   description: '"Discover Movies, Shows and More!"',
+      //   icon: 'TicketIcon',
+      //   subMenuItems: [
+      //     {
+      //       name: 'Discover',
+      //       href: routes.movies.dashboard,
+      //     },
+      //   ],
+      // },
     ],
   },
   widgets: {

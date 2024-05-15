@@ -99,13 +99,13 @@ export default function Editor({ post }: { post: IBlogPostPopulated }) {
           defaultValue={post?.title || ''}
           autoFocus
           onChange={(e) => setData({ ...data, title: e.target.value })}
-          className="dark:placeholder-text-600 font-cal border-none px-0 text-3xl placeholder:text-stone-400 focus:outline-none focus:ring-0 dark:bg-black dark:text-white"
+          className="dark:placeholder-text-600 font-cal border-none px-0 text-3xl placeholder:text-stone-400 focus:outline-none focus:ring-0 dark:bg-transparent dark:text-white"
         />
         <TextareaAutosize
           placeholder="Description"
           defaultValue={post?.description || ''}
           onChange={(e) => setData({ ...data, description: e.target.value })}
-          className="dark:placeholder-text-600 w-full resize-none border-none px-0 placeholder:text-stone-400 focus:outline-none focus:ring-0 dark:bg-black dark:text-white"
+          className="dark:placeholder-text-600 w-full resize-none border-none px-0 placeholder:text-stone-400 focus:outline-none focus:ring-0 dark:bg-transparent dark:text-white"
         />
       </div>
       <NovelEditor

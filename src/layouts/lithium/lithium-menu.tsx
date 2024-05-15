@@ -82,97 +82,90 @@ function EnhancedMenuItems({
   );
 }
 
-export const EnhancedMenu = forwardRef(
-  (
-    {
-      items,
-      className = '',
-    }: {
-      items: DropdownItemType[];
-      className?: string;
-    },
-    ref: ForwardedRef<HTMLDivElement>
-  ) => {
-    const [currentState, setState] = useState<number>(0);
-    const pathname = usePathname();
+export function EnhancedMenu({
+  items,
+  className = '',
+}: {
+  items: DropdownItemType[];
+  className?: string;
+}) {
+  const [currentState, setState] = useState<number>(0);
+  const pathname = usePathname();
 
-    useEffect(() => {
-      if (
-        items.some(
-          (item) =>
-            item.subMenuItems?.some((subItem) => subItem.href === pathname)
+  useEffect(() => {
+    if (
+      items.some((item) =>
+        item.subMenuItems?.some((subItem) => subItem.href === pathname)
+      )
+    ) {
+      setState(
+        items.findIndex((item) =>
+          item.subMenuItems?.some((subItem) => subItem.href === pathname)
         )
-      ) {
-        setState(
-          items.findIndex(
-            (item) =>
-              item.subMenuItems?.some((subItem) => subItem.href === pathname)
-          )
-        );
-      }
-    }, [items, pathname]);
-    return (
-      <motion.div
-        key="enhanced-menu"
-        initial={{ opacity: 0, scale: 0.75 }}
-        transition={{ duration: 0.1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, transition: { duration: 0.2 } }}
-        className={cn('flex gap-x-2 p-1 pb-1.5 pe-1.5', className)}
-      >
-        <div className="col-span-3 flex w-[200px] flex-col gap-2 pe-0">
-          {items.map((item, index) => {
-            const Icon = lithiumMenuIcons?.[item.icon as LithiumMenuIconType];
-            return (
-              <button
-                role="div"
-                key={`link-menu-${item.name}-${index}`}
+      );
+    }
+  }, [items, pathname]);
+  return (
+    <motion.div
+      key="enhanced-menu"
+      initial={{ opacity: 0, scale: 0.75 }}
+      transition={{ duration: 0.1 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      className={cn('flex gap-x-2 p-1 pb-1.5 pe-1.5', className)}
+    >
+      <div className="col-span-3 flex w-[200px] flex-col gap-2 pe-0">
+        {items.map((item, index) => {
+          const Icon = lithiumMenuIcons?.[item.icon as LithiumMenuIconType];
+          return (
+            <button
+              role="div"
+              key={`link-menu-${item.name}-${index}`}
+              className={cn(
+                'relative cursor-pointer rounded-lg p-3 pb-2.5 text-left font-medium text-gray-900 duration-200',
+                {
+                  'bg-white dark:bg-gray-100': currentState === index,
+                }
+              )}
+              onClick={() => setState(index)}
+            >
+              <div className="mb-2 flex items-center gap-2">
+                <Icon className="h-5 w-5" />
+                <span>{item.name}</span>
+              </div>
+              <p className="text-xs font-normal leading-5 text-gray-500">
+                {item?.description}
+              </p>
+              <span
                 className={cn(
-                  'relative cursor-pointer rounded-lg p-3 pb-2.5 text-left font-medium text-gray-900 duration-200',
+                  'absolute -end-[9px]  top-1/2 -translate-y-1/2 text-white opacity-0 duration-200 dark:text-gray-100 rtl:rotate-180',
                   {
-                    'bg-white dark:bg-gray-100': currentState === index,
+                    'opacity-100': currentState === index,
                   }
                 )}
-                onClick={() => setState(index)}
               >
-                <div className="mb-2 flex items-center gap-2">
-                  <Icon className="h-5 w-5" />
-                  <span>{item.name}</span>
-                </div>
-                <p className="text-xs font-normal leading-5 text-gray-500">
-                  {item?.description}
-                </p>
-                <span
-                  className={cn(
-                    'absolute -end-[9px]  top-1/2 -translate-y-1/2 text-white opacity-0 duration-200 rtl:rotate-180 dark:text-gray-100',
-                    {
-                      'opacity-100': currentState === index,
-                    }
-                  )}
-                >
-                  <AiFillCaretRight className="h-auto w-3.5" />
-                </span>
-                <span
-                  className={cn(
-                    'absolute -end-[17px] top-1/2 -translate-y-1/2 text-gray-50  opacity-0 duration-200 rtl:rotate-180 dark:text-gray-0',
-                    {
-                      'opacity-100': currentState === index,
-                    }
-                  )}
-                >
-                  <AiFillCaretRight className="h-auto w-3.5" />
-                </span>
-              </button>
-            );
-          })}
-        </div>
-        <EnhancedMenuItems items={items} currentState={currentState} />
-      </motion.div>
-    );
-  }
-);
+                <AiFillCaretRight className="h-auto w-3.5" />
+              </span>
+              <span
+                className={cn(
+                  'absolute -end-[17px] top-1/2 -translate-y-1/2 text-gray-50  opacity-0 duration-200 dark:text-gray-0 rtl:rotate-180',
+                  {
+                    'opacity-100': currentState === index,
+                  }
+                )}
+              >
+                <AiFillCaretRight className="h-auto w-3.5" />
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <EnhancedMenuItems items={items} currentState={currentState} />
+    </motion.div>
+  );
+}
 
-EnhancedMenu.displayName = 'EnhancedMenu';
+// EnhancedMenu.displayName = 'EnhancedMenu';
 
 export function LinkMenu({
   items,
