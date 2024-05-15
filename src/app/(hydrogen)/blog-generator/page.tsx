@@ -33,7 +33,7 @@ export default function Overview() {
             </div>
           }
         >
-          <Sites limit={4} />
+          <Sites limit={3} />
         </Suspense>
       </div>
 
@@ -50,7 +50,7 @@ export default function Overview() {
             </div>
           }
         >
-          <Posts limit={8} />
+          <Posts limit={6} />
         </Suspense>
       </div>
     </div>

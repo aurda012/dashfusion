@@ -13,7 +13,7 @@ export default async function Posts({
   const posts = await getPosts(limit, siteId);
 
   return posts.length > 0 ? (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
       {posts.map((post) => (
         <PostCard key={post._id} data={post} />
       ))}

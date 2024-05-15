@@ -6,7 +6,7 @@ export default async function Sites({ limit }: { limit?: number }) {
   const sites = await getSites(limit);
 
   return sites.length > 0 ? (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
       {sites.map((site) => (
         <SiteCard key={site._id} data={site} />
       ))}
