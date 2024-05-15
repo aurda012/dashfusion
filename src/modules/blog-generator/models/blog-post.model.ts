@@ -1,4 +1,4 @@
-import { randomUUID } from 'crypto';
+import { v4 as uuid } from 'uuid';
 import { Schema, model, models, Types } from 'mongoose';
 import { ISite } from './site.model';
 
@@ -6,7 +6,7 @@ export interface IBlogPost {
   _id: string;
   title: string;
   description: string;
-  content: number;
+  content: string;
   slug: string;
   image: string;
   imageBlurhash: string;
@@ -21,7 +21,7 @@ export interface IBlogPostPopulated {
   _id: string;
   title: string;
   description: string;
-  content: number;
+  content: string;
   slug: string;
   image: string;
   imageBlurhash: string;
@@ -35,8 +35,8 @@ export interface IBlogPostPopulated {
 const BlogPostSchema = new Schema({
   title: String,
   description: String,
-  content: String,
-  slug: { type: String, unique: true, default: randomUUID() },
+  content: { type: String, default: '' },
+  slug: { type: String, unique: true, default: () => uuid() },
   image: {
     type: String,
     default:

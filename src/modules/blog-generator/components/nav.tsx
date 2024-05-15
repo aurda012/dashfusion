@@ -107,7 +107,7 @@ export default function Nav() {
       return [
         {
           name: 'Back to All Posts',
-          href: siteId ? `/site/${siteId}` : '/sites',
+          href: siteId ? `/blog-generator/site/${siteId}` : '/sites',
           icon: <ArrowLeft width={18} />,
         },
         {

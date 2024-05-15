@@ -21,7 +21,6 @@ export default function Overview() {
             Top Sites
           </h1>
           <Suspense fallback={null}>
-            {/* @ts-expect-error Async Server Component */}
             <OverviewSitesCTA />
           </Suspense>
         </div>
@@ -34,7 +33,6 @@ export default function Overview() {
             </div>
           }
         >
-          {/* @ts-expect-error Async Server Component */}
           <Sites limit={4} />
         </Suspense>
       </div>
@@ -52,7 +50,6 @@ export default function Overview() {
             </div>
           }
         >
-          {/* @ts-expect-error Async Server Component */}
           <Posts limit={8} />
         </Suspense>
       </div>

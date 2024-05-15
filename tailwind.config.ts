@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import { withUt } from 'uploadthing/tw';
 import plugin from 'tailwindcss/plugin';
 
@@ -166,6 +167,9 @@ export default withUt({
       fontFamily: {
         inter: ['var(--font-inter)'],
         lexend: ['var(--font-lexend)'],
+        cal: ['var(--font-cal)', ...fontFamily.sans],
+        title: ['var(--font-title)', ...fontFamily.sans],
+        mono: ['Consolas', ...fontFamily.mono],
       },
       fontSize: {
         'tremor-label': ['0.75rem'],

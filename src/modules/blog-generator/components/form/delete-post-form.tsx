@@ -26,7 +26,7 @@ export default function DeletePostForm({ postName }: { postName: string }) {
             va.track('Deleted Post');
             router.refresh();
             // @ts-ignore
-            router.push(`/site/${res.site}`);
+            router.push(`/blog-generator/site/${res.site}`);
             toast.success(`Successfully deleted post!`);
           }
         })

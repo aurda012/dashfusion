@@ -2,10 +2,7 @@ import './src/env.mjs';
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  experimental: {
-    mdxRs: true,
-    serverMinification: false,
-  },
+  transpilePackages: ['next-mdx-remote'],
   images: {
     remotePatterns: [
       {
@@ -87,6 +84,7 @@ const nextConfig = {
       { hostname: 'www.google.com' },
       { hostname: 'flag.vercel.app' },
       { hostname: 'illustrations.popsy.co' },
+      { hostname: 'dashfusion.vercel.app' },
     ],
   },
   reactStrictMode: false,
