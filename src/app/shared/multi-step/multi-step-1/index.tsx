@@ -3,7 +3,7 @@
 import { useAtom } from 'jotai';
 import { atomWithReset, atomWithStorage } from 'jotai/utils';
 import cn from '@/utils/class-names';
-import Footer from '@/app/multi-step/footer';
+import Footer from '@/app/(hydrogen)/multi-step/footer';
 import StepOne from '@/app/shared/multi-step/multi-step-1/step-1';
 import StepTwo from '@/app/shared/multi-step/multi-step-1/step-2';
 import StepThree from '@/app/shared/multi-step/multi-step-1/step-3';
@@ -118,7 +118,7 @@ export default function MultiStepFormOne() {
     <Suspense fallback={<div>Loading...</div>}>
       <div
         className={cn(
-          'mx-auto grid w-full max-w-screen-2xl grid-cols-12 place-content-center gap-6 px-5 py-10 @3xl:min-h-[calc(100vh-10rem)] @5xl:gap-8 @6xl:gap-16 xl:px-7'
+          'mx-auto grid w-full max-w-screen-2xl grid-cols-12 place-content-center gap-6 px-5 py-10 @3xl:min-h-[calc(80vh-10rem)] @5xl:gap-8 @6xl:gap-16 xl:px-7'
         )}
       >
         <Component />

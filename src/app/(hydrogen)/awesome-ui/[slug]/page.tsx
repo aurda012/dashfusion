@@ -1,6 +1,13 @@
+'use client';
+
 import { components } from '@/modules/awesome-ui/components';
+import { useEffect } from 'react';
 
 const ComponentPage = ({ params }: { params: { slug: string } }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const comp = components.find((c) => c.path === `/awesome-ui/${params.slug}`);
   if (!comp) {
     return (

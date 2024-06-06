@@ -165,7 +165,7 @@ export default function Nav() {
       <div
         className={`transform ${
           showSidebar ? 'w-full translate-x-0' : '-translate-x-full'
-        } fixed z-10 flex h-full flex-col justify-between border-r border-stone-200 bg-transparent p-4 py-8 transition-all dark:border-stone-700 sm:w-60 sm:translate-x-0`}
+        } fixed z-10 flex h-full flex-col justify-between border-r border-stone-200 bg-background p-4 py-8 transition-all dark:border-stone-700 sm:w-60 sm:translate-x-0`}
       >
         <div className="grid gap-2">
           {/* <div className="flex items-center space-x-2 rounded-lg px-2 py-1.5">

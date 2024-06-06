@@ -23,8 +23,8 @@ export default function EcommerceDashboard() {
         <WelcomeBanner
           title={
             <>
-              Good Morning, <br /> Cameron{' '}
-              <HandWaveIcon className="inline-flex h-8 w-8" />
+              Good Morning
+              <HandWaveIcon className="ml-2 inline-flex h-8 w-8" />
             </>
           }
           description={
@@ -42,7 +42,7 @@ export default function EcommerceDashboard() {
             </div>
           }
           contentClassName="@2xl:max-w-[calc(100%-340px)]"
-          className="border border-muted bg-gray-0 pb-8 @4xl:col-span-2 @7xl:col-span-8 lg:pb-9 dark:bg-gray-100/30"
+          className="border border-muted bg-gray-0 pb-8 @4xl:col-span-2 @7xl:col-span-8 dark:bg-gray-100/30 lg:pb-9"
         >
           <Link href={routes.eCommerce.createProduct} className="inline-flex">
             <Button as="span" className="h-[38px] shadow md:h-10">

@@ -57,7 +57,7 @@ export const usePresets = () => {
       },
     },
     {
-      name: 'Violet',
+      name: 'Purple',
       colors: {
         lighter: '#ede9fe', // Violet 100
         light: '#a5b4fc', // Violet 300
@@ -67,7 +67,7 @@ export const usePresets = () => {
       },
     },
     {
-      name: 'Rose',
+      name: 'Red',
       colors: {
         lighter: '#ffe4e6', // Rose 100
         light: '#fda4af', // Rose 300
